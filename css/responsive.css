@@ -201,7 +201,7 @@
   /* common */
   .game {
     padding: 50px 30px;
-    min-height: 80vh;
+    min-height: 100vh;
   }
 
   .game::before {
@@ -388,7 +388,7 @@
   /* common */
   .game {
     padding: 50px 40px;
-    min-height: 80vh;
+    min-height: 100vh;
   }
 
   .game::before {
