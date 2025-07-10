@@ -1,0 +1,193 @@
+@charset "UTF-8";
+
+/* size */
+:root {
+  /* size */
+  --font-size-12px: 0.75rem;
+  --font-size-14px: 0.875rem;
+  --font-size-16px: 1rem;
+  --font-size-18px: 1.125rem;
+  --font-size-24px: 1.5rem;
+  --font-size-30px: 1.875rem;
+  --font-size-48px: 3rem;
+
+  /* weight */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  /* color */
+  --red-color: #A0301F;
+  --blue-color: #1A2E45;
+  --black-color: #1C1C1C;
+  --beige-color: #DCD3B9;
+  --white-color: #ffffff;
+  /*  */
+}
+
+/* 
+font-family: 'Zen Maru Gothic', sans-serif;
+font-family: 'Shippori Mincho', serif; */
+
+/* whole */
+body {
+  color: var(--black-color);
+  font-family: 'Noto Serif JP', serif;
+  font-size: var(--font-size-18px);
+  font-weight: var(--font-weight-light);
+}
+
+/*  */
+
+/* footer */
+footer p {
+  font-size: var(--font-size-14px);
+  font-weight: var(--font-weight-regular);
+  text-align: center;
+}
+
+/*  */
+
+/* common */
+/*  */
+
+/* game-start */
+.title-area p {
+  color: var(--white-color);
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: var(--font-weight-medium);
+}
+
+.game-title {
+  color: var(--white-color);
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: var(--font-size-48px);
+  font-weight: var(--font-weight-black);
+}
+
+.category-title {
+  color: var(--white-color);
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: var(--font-size-24px);
+  font-weight: var(--font-weight-medium);
+  text-align: center;
+}
+
+.game-detail p {
+  text-align: center;
+}
+
+.start{
+  color: var(--white-color);
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: var(--font-size-24px);
+  font-weight: var(--font-weight-bold);
+}
+
+/*  */
+
+/* game-question */
+.question-title {
+  color: var(--white-color);
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: var(--font-size-14px);
+  text-align: center;
+}
+
+.text {
+  font-weight: var(--font-weight-regular);
+  text-align: justify;
+}
+
+.card {
+  font-size: var(--font-size-16px);
+  font-weight: var(--font-weight-regular);
+  text-align: center;
+}
+
+.end-coment{
+  color: var(--red-color);
+  font-size: var(--font-size-14px);
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+}
+
+.result-correct-banner,
+.result-incorrect-banner {
+  color: var(--white-color);
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-24px);
+  text-align: center;
+}
+
+.result-next-banner,
+.showresult-button{
+  font-size: var(--font-size-16px);
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: var(--font-weight-medium);
+  text-align: center;
+}
+
+.get-cards-title {
+  font-size: var(--font-size-12px);
+  font-weight: var(--font-weight-medium);
+}
+
+.number {
+  color: var(--red-color);
+  font-size: var(--font-size-18px);
+  font-weight: var(--font-weight-black);
+  letter-spacing: 0.1rem;
+}
+
+/*  */
+
+/* game-end */
+.page-title {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: var(--font-size-30px);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+}
+
+.acquisition-title,
+.not-earned-title {
+  color: var(--white-color);
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: var(--font-size-14px);
+  font-weight: var(--font-weight-medium);
+  text-align: center;
+}
+
+.acquisition-cards,
+.not-earned-cards {
+  font-size: var(--font-size-48px);
+  font-weight: var(--font-weight-black);
+  letter-spacing: 0.1rem;
+  text-align: center;
+}
+
+.result-all-banner {
+  color: var(--white-color);
+  font-size: var(--font-size-24px);
+  font-weight: var(--font-weight-black);
+  letter-spacing: 0.3rem;
+  text-align: center;
+}
+
+.game-links {
+  text-align: center;
+}
+
+.one-more,
+.home {
+  font-family: 'Noto Serif JP', serif;
+  font-size: var(--font-size-18px);
+  font-weight: var(--font-weight-medium);
+}
+
+/*  */

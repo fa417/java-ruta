@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>じゃばルタ</title>
+  <link rel="icon" href="./img/favicon.png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700;900&family=Zen+Maru+Gothic:wght@300;400;500;700;900&family=Shippori+Mincho:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="./css/font.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+
+</head>
+
+<body>
+
+  <div class="game" id="game-start">
+    <div class="title-area">
+      <p>JavaScriptの学習カルタゲーム</p>
+      <h1 class="game-title" id="home">じゃばルタ</h1>
+    </div>
+
+    <div class="game-detail">
+      <h2 class="category-title">遊び方</h2>
+      <p>表示されたヒント（お題）に当てはまる「じゃばルタ札」をタッチしよう！<span class="sp-br"><br></span>正解すると札がゲットできるよ！<span
+          class="sp-br"><br></span>すべての札を集めるとクリア！</p>
+    </div>
+
+    <button class="start" id="start-btn">スタート</button>
+
+    <footer>
+      <p>&copy; じゃばルタ制作局</p>
+    </footer>
+  </div>
+
+  <div class="game" id="question" style="display: none;">
+
+    <div id="question-area">
+      <div class="question-inner">
+        <h3 class="question-title" id="question-count"></h3>
+        <p class="text" id="question-text">filterの説明で正しいじゃばルタはどれ？</p>
+      </div>
+
+      <div class="cards" id="card-area"></div>
+    </div>
+
+    <div class="banners-area" id="banners">
+
+      <div class="action-banners" id="action">
+        <div class="result-correct-banner" id="correct-banner">大正解！</div>
+        <div class="result-incorrect-banner" id="incorrect-banner">失敗...</div>
+        <button class="result-next-banner" id="next-banner">次の問題に進む</button>
+        <p class="end-coment" id="coment">\ ここまでで終了 /</p>
+        <button class="showresult-button" id="showresult">結果を見る</button>
+      </div>
+
+    </div>
+
+    <div class="get-cards-count">
+      <p class="get-cards-title">獲得枚数</p>
+      <p class="number" id="cards-number">0枚</p>
+    </div>
+
+  </div>
+
+  <div class="game" id="game-end" style="display: none;">
+    <h3 class="page-title">結果発表</h3>
+
+    <div class="cards-reslut">
+
+      <div class="acquisition-inner">
+
+        <h4 class="acquisition-title">獲得枚数</h4>
+        <p class="acquisition-cards" id="acquisition"></p>
+
+      </div>
+
+      <div class="not-earned-inner">
+
+        <h5 class="not-earned-title">取り逃し枚数</h5>
+        <p class="not-earned-cards" id="not-earned"></p>
+
+      </div>
+    </div>
+
+    <div class="result-all-banner" id="all-banner"></div>
+
+    <div class="game-links">
+      <button class="one-more" id="retry-btn">もう一回遊ぶ</button>
+      <button class="home" id="home-btn">トップに戻る</button>
+    </div>
+  </div>
+
+  <script type="module" src="js/script.js"></script>
+  <script type="module" src="js/service-worker.js"></script>
+</body>
+
+</html>

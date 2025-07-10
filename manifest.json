@@ -1,0 +1,20 @@
+{
+  "name": "じゃばルタ",
+  "short_name": "じゃばルタ",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1a2e45",
+  "icons": [
+    {
+      "src": "./img/iphone-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/pwa-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

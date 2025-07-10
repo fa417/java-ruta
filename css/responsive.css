@@ -1,0 +1,558 @@
+@charset "UTF-8";
+
+:root {
+  /* size */
+  --font-size-12px: 0.75rem;
+  --font-size-14px: 0.875rem;
+  --font-size-16px: 1rem;
+  --font-size-18px: 1.125rem;
+  --font-size-24px: 1.5rem;
+  --font-size-30px: 1.875rem;
+  --font-size-48px: 3rem;
+
+  /* weight */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+}
+
+
+/* 379px〜767px */
+@media (min-width: 379px) and (max-width: 767px) {
+
+  /* whole */
+  body {
+    font-size: var(--font-size-18px);
+    line-height: 1.6;
+  }
+
+  /*  */
+
+  /* common */
+  .game {
+    padding: 50px 20px;
+  }
+
+  .game::before {
+    background-repeat: repeat;
+    background-size: contain;
+  }
+
+  /*  */
+
+  /* game-start */
+  .title-area {
+    width: 90%;
+  }
+
+  .title-area p {
+    margin-bottom: 10px;
+  }
+
+  .game-title {
+    font-size: var(--font-size-30px);
+  }
+
+  .game-detail {
+    padding: 30px 20px;
+    margin: 20px 0;
+    width: 90%;
+  }
+
+  .game-detail p {
+    text-align: justify;
+  }
+
+  .sp-br {
+    display: none;
+  }
+
+  .start {
+    width: 80%;
+  }
+
+  /*  */
+
+  /* game-question */
+  .question-inner {
+    margin: auto;
+    width: 90%;
+  }
+
+  .question-title {
+    font-size: var(--font-size-16px);
+    margin: auto;
+  }
+
+  .text {
+    text-align: center;
+  }
+
+  .cards {
+    row-gap: 30px;
+    column-gap: 10px;
+    margin: 40px auto 0;
+    width: 90%;
+  }
+
+  .card {
+    font-size: var(--font-size-18px);
+    width: 130px;
+    height: 150px;
+    margin: 10px auto;
+    font-size: var(--font-size-18px);
+  }
+
+  .get-cards-count {
+    width: 80px;
+    height: 80px;
+    bottom: 50px;
+  }
+
+  .get-cards-title {
+    font-size: var(--font-size-14px);
+  }
+
+  .number {
+    font-size: var(--font-size-24px);
+  }
+
+  .result-correct-banner,
+  .result-incorrect-banner {
+    width: 90%;
+  }
+
+  .result-next-banner {
+    width: 40%;
+  }
+
+  .result-next-banner,
+  .showresult-button {
+    font-size: var(--font-size-18px);
+  }
+
+  .end-coment {
+    font-size: var(--font-size-16px);
+  }
+
+  /*  */
+
+  /* game-end */
+  .page-title {
+    font-size: var(--font-size-24px);
+    margin: auto;
+    width: 90%;
+  }
+
+  .acquisition-inner,
+  .not-earned-inner {
+    padding: 20px 10px;
+  }
+
+  .acquisition-title,
+  .not-earned-title {
+    font-size: var(--font-size-16px);
+    margin: auto;
+    width: 90%;
+  }
+
+  .cards-reslut {
+    justify-content: space-around;
+    gap: 30px;
+    width: 90%;
+    margin: 70px auto;
+  }
+
+  .result-all-banner {
+    margin: 50px auto;
+    width: 90%;
+  }
+
+  .game-links {
+    bottom: 50px;
+    gap: 30px;
+    margin: auto;
+    width: 90%;
+  }
+
+  /*  */
+}
+
+/* 768px〜1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  /* whole */
+  body {
+    font-size: var(--font-size-18px);
+    line-height: 1.7;
+  }
+
+  /*  */
+
+  /* footer */
+  footer {
+    margin-top: 20px;
+  }
+
+  /*  */
+
+  /* common */
+  .game {
+    padding: 50px 30px;
+    min-height: 80vh;
+  }
+
+  .game::before {
+    background-repeat: repeat;
+    background-size: auto;
+  }
+
+  /*  */
+  /* game-start */
+  .title-area {
+    font-size: var(--font-size-24px);
+    padding: 20px;
+    width: 80%;
+  }
+
+  .title-area p {
+    font-size: var(--font-size-18px);
+  }
+
+  .game-detail {
+    margin: 30px 0;
+    padding: 30px 20px;
+    width: 80%;
+  }
+
+  .category-title {
+    width: 20%;
+  }
+
+  .sp-br {
+    display: none;
+  }
+
+  .game-detail p {
+    text-align: justify;
+  }
+
+  .game-detail p:first-of-type {
+    margin-top: 20px;
+  }
+
+  .start {
+    padding: 20px 0;
+    border-radius: 40px;
+    width: 70%;
+  }
+
+  /*  */
+
+  /* game-question */
+  .question-inner {
+    margin: auto;
+    width: 80%;
+  }
+
+  .question-title {
+    font-size: var(--font-size-16px);
+    margin: auto;
+  }
+
+  .text {
+    font-size: var(--font-size-24px);
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .cards {
+    row-gap: 40px;
+    column-gap: 20px;
+    margin: 50px auto 0;
+    width: 80%;
+  }
+
+  .card {
+    font-size: var(--font-size-18px);
+    width: 170px;
+    height: 200px;
+    margin: 10px auto;
+  }
+
+  .get-cards-count {
+    width: 100px;
+    height: 100px;
+    right: 30px;
+    bottom: 60px;
+  }
+
+  .get-cards-title {
+    font-size: var(--font-size-16px);
+  }
+
+  .number {
+    font-size: var(--font-size-24px);
+  }
+
+  .action-banners {
+    padding: 20px;
+  }
+
+  .result-incorrect-banner {
+    width: 80%;
+  }
+
+  .result-next-banner,
+  .showresult-button {
+    font-size: var(--font-size-18px);
+    padding: 10px;
+    width: 30%;
+  }
+
+  .end-coment {
+    font-size: var(--font-size-16px);
+  }
+
+  /*  */
+
+  /* game-end */
+  .page-title {
+    margin: auto;
+    width: 80%;
+  }
+
+  .cards-reslut {
+    justify-content: space-between;
+    gap: 40px;
+    margin: 80px auto;
+    width: 80%;
+  }
+
+  .acquisition-title,
+  .not-earned-title {
+    font-size: var(--font-size-18px);
+    margin: auto;
+    width: 80%;
+  }
+
+  .acquisition-inner,
+  .not-earned-inner {
+    padding: 30px 20px;
+  }
+
+  .acquisition-cards,
+  .not-earned-cards {
+    margin: 30px 0;
+  }
+
+  .result-all-banner {
+    margin: 60px auto;
+    width: 80%;
+  }
+
+  .game-links {
+    gap: 40px;
+    margin: auto;
+    width: 80%;
+  }
+
+  .one-more,
+  .home {
+    padding: 10px 40px;
+  }
+
+  /*  */
+}
+
+/* 1024px〜 */
+@media (min-width: 1024px) {
+
+  /* whole */
+  body {
+    font-size: var(--font-size-18px);
+    line-height: 1.8;
+  }
+
+  /*  */
+
+  /* footer */
+  footer {
+    margin-top: 20px;
+  }
+
+  /*  */
+
+  /* common */
+  .game {
+    padding: 50px 40px;
+    min-height: 80vh;
+  }
+
+  .game::before {
+    background-repeat: repeat;
+    background-size: auto;
+  }
+
+  /*  */
+  /* game-start */
+  .title-area {
+    font-size: var(--font-size-24px);
+    padding: 20px;
+    width: 70%;
+  }
+
+  .title-area p {
+    font-size: var(--font-size-18px);
+  }
+
+  .game-detail {
+    margin: 40px 0;
+    padding: 30px 20px;
+    width: 70%;
+  }
+
+  .category-title {
+    width: 20%;
+  }
+
+  .sp-br {
+    display: none;
+  }
+
+  .game-detail p {
+    text-align: justify;
+  }
+
+  .game-detail p:first-of-type {
+    margin-top: 20px;
+  }
+
+  .start {
+    padding: 20px 0;
+    border-radius: 40px;
+    width: 60%;
+  }
+
+  /*  */
+
+  /* game-question */
+  .question-inner {
+    margin: auto;
+    padding: 10px;
+    width: 70%;
+  }
+
+  .question-title {
+    font-size: var(--font-size-18px);
+    margin: auto;
+    width: 20%;
+  }
+
+  .text {
+    font-size: var(--font-size-24px);
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .cards {
+    row-gap: 50px;
+    column-gap: 30px;
+    margin: 60px auto 0;
+    width: 70%;
+  }
+
+  .card {
+    font-size: var(--font-size-24px);
+    width: 200px;
+    height: 230px;
+    margin: 20px auto;
+  }
+
+  .get-cards-count {
+    width: 130px;
+    height: 130px;
+    right: 40px;
+    bottom: 70px;
+  }
+
+  .get-cards-title {
+    font-size: var(--font-size-18px);
+  }
+
+  .number {
+    font-size: var(--font-size-30px);
+  }
+
+  .action-banners {
+    padding: 20px;
+  }
+
+  .result-incorrect-banner {
+    width: 70%;
+  }
+
+  .result-next-banner,
+  .showresult-button {
+    font-size: var(--font-size-18px);
+    padding: 10px;
+    width: 20%;
+  }
+
+  .end-coment {
+    font-size: var(--font-size-16px);
+  }
+
+  /*  */
+
+  /* game-end */
+  .page-title {
+    margin: auto;
+    width: 70%;
+  }
+
+  .cards-reslut {
+    justify-content: space-between;
+    gap: 50px;
+    margin: 90px auto 0;
+    width: 70%;
+  }
+
+  .acquisition-title,
+  .not-earned-title {
+    font-size: var(--font-size-18px);
+    margin: auto;
+    width: 70%;
+  }
+
+  .acquisition-inner,
+  .not-earned-inner {
+    padding: 30px;
+  }
+
+  .acquisition-cards,
+  .not-earned-cards {
+    margin: 30px 0;
+  }
+
+  .result-all-banner {
+    margin: 70px auto;
+    width: 70%;
+  }
+
+  .game-links {
+    bottom: 30px;
+    gap: 40px;
+    margin: auto;
+    width: 70%;
+  }
+
+  .one-more,
+  .home {
+    padding: 10px 40px;
+  }
+
+  /*  */
+}

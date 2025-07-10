@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+:root {
+  /* color */
+  --red-color: #A0301F;
+  --blue-color: #1A2E45;
+  --black-color: #1C1C1C;
+  --beige-color: #DCD3B9;
+  --white-color: #ffffff;
+  /*  */
+}
+
+/* common */
+.game::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background-image: url(../img/back.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+}
+
+/*  */
+
+/* game-start */
+.title-area {
+  background: var(--red-color);
+  border-radius: 20px;
+}
+
+.game-detail {
+  background: var(--white-color);
+  border: 1px solid var(--black-color);
+  border-radius: 20px;
+}
+
+.category-title {
+  background: var(--blue-color);
+  border-radius: 20px;
+}
+
+.start {
+  background: var(--blue-color);
+  border-radius: 30px;
+}
+
+/*  */
+
+/* game-question */
+.question-inner {
+  background: var(--white-color);
+}
+
+.question-title {
+  background: var(--blue-color);
+  border-radius: 20px;
+}
+
+.card {
+  background-color: var(--white-color);
+  border: 1px solid var(--red-color);
+}
+
+.action-banners {
+  background: var(--white-color);
+  border: 1px solid var(--black-color);
+}
+
+.result-correct-banner {
+  background: var(--red-color);
+}
+
+.result-incorrect-banner {
+  background: var(--blue-color);
+}
+
+.result-next-banner,
+.showresult-button {
+  background: var(--white-color);
+  border-radius: 30px;
+  border: 1px solid var(--black-color);
+}
+
+.get-cards-count {
+  background: var(--white-color);
+  border: 1px solid var(--black-color);
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+}
+
+/*  */
+
+
+/* game-end */
+.page-title {
+  background: var(--white-color);
+}
+
+.acquisition-inner {
+  background: var(--white-color);
+  border: 1px solid var(--red-color);
+}
+
+.not-earned-inner {
+  background: var(--white-color);
+  border: 1px solid var(--blue-color);
+}
+
+.acquisition-title {
+  background: var(--red-color);
+  border-radius: 30px;
+}
+
+.not-earned-title {
+  background: var(--blue-color);
+  border-radius: 30px;
+}
+
+.result-all-banner {
+  background: var(--red-color);
+}
+
+.one-more,
+.home {
+  background: var(--white-color);
+  border: 1px solid var(--black-color);
+  border-radius: 30px;
+}
+
+/*  */
