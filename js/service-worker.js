@@ -3,8 +3,8 @@ const urlsToCache = [
   './',
   './index.html',
   './js/script.js',
-  './img/iphone-icon.png',
-  './img/pwa-icon.png',
+  // './img/iphone-icon.png',
+  // './img/pwa-icon.png',
 ];
 
 self.addEventListener('install', event => {
