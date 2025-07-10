@@ -1,8 +1,8 @@
 const CACHE_NAME = 'jabakarta-cache-v1';
 const urlsToCache = [
   './',
-  './index.html',
-  // './js/script.js',
+  // './index.html',
+  './js/script.js',
   './img/iphone-icon.png',
   './img/pwa-icon.png',
 ];
