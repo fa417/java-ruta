@@ -125,10 +125,35 @@ document.getElementById('retry-btn').addEventListener('click', () => {
 
   showQuestion();
 });
+
+document.getElementById('retry-btn-answer').addEventListener('click', () => {
+  countIndex = 0;
+  countNumber = 0;
+  document.getElementById('cards-number').textContent = '0枚';
+
+  randomQuestion.length = 0;
+  randomQuestion.push(...[...questions].sort(() => Math.random() - 0.5).slice(0, 2));
+
+  end.style.display = 'none';
+  questionPage.style.display = 'block';
+  answer.style.display = 'none';
+
+  showQuestion();
+});
 // 
 
 // トップに戻るボタン処理
 document.getElementById('home-btn').addEventListener('click', () => {
+  countIndex = 0;
+  countNumber = 0;
+  document.getElementById('cards-number').textContent = '0枚';
+
+  end.style.display = 'none';
+  first.style.display = 'flex';
+  questionPage.style.display = 'none';
+});
+
+document.getElementById('home-btn-answer').addEventListener('click', () => {
   countIndex = 0;
   countNumber = 0;
   document.getElementById('cards-number').textContent = '0枚';
@@ -175,12 +200,14 @@ document.getElementById('answer-btn').addEventListener('click', () => {
 });
 // 
 
+// 結果発表ページに戻るボタン
 document.getElementById('end-btn').addEventListener('click', () => {
   end.style.display = 'block';
   answer.style.display = 'none';
   first.style.display = 'none';
   questionPage.style.display = 'none';
 });
+// 
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('./js/service-worker.js')
