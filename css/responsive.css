@@ -143,6 +143,7 @@
   .page-title {
     font-size: var(--font-size-24px);
     margin: auto;
+    padding: 10px 0;
     width: 90%;
   }
 
@@ -166,6 +167,7 @@
   }
 
   .result-all-banner {
+    padding: 20px 0;
     margin: 50px auto;
     width: 90%;
   }
@@ -368,6 +370,7 @@
   /* game-end */
   .page-title {
     margin: auto;
+    padding: 20px 0;
     width: 80%;
   }
 
@@ -396,13 +399,15 @@
   }
 
   .result-all-banner {
+    padding: 20px 0;
     margin: 60px auto;
     width: 80%;
   }
 
   .answer,
   .end {
-    padding: 10px 20px;
+    padding: 20px;
+    border-radius: 40px;
   }
 
   .game-links {
@@ -417,7 +422,8 @@
 
   .one-more,
   .home {
-    padding: 10px 20px;
+    padding: 20px;
+    border-radius: 40px;
   }
 
   .answer:hover,
@@ -614,6 +620,7 @@
   /* game-end */
   .page-title {
     margin: auto;
+    padding: 20px 0;
     width: 70%;
   }
 
@@ -642,6 +649,7 @@
   }
 
   .result-all-banner {
+    padding: 20px 0;
     margin: 70px auto;
     width: 70%;
   }
@@ -655,7 +663,8 @@
 
   .answer,
   .end {
-    padding: 10px 20px;
+    padding: 20px;
+    border-radius: 40px;
   }
 
   .game-links-row2 {
@@ -664,7 +673,8 @@
 
   .one-more,
   .home {
-    padding: 10px 20px;
+    padding: 20px;
+    border-radius: 40px;
   }
 
   .answer:hover,
