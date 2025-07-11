@@ -7,12 +7,12 @@
   "theme_color": "#A0301F",
   "icons": [
     {
-      "src": "./img/pwa-icon.png",
+      "src": "./img/pwa.png",
       "sizes": "512x512",
       "type": "image/png"
     },
     {
-      "src": "./img/iphone-icon.png",
+      "src": "./img/iphone.png",
       "sizes": "192x192",
       "type": "image/png"
     }
