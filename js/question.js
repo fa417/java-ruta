@@ -857,7 +857,8 @@ export const questions = [
       { text: 'キーの配列', isCorrect: false },
       { text: '関数の一覧', isCorrect: false },
       { text: 'JSON形式の文字列', isCorrect: false }
-    ]
+    ],
+    explanation: 'Object.keys(obj) は、指定したオブジェクトのすべてのキー（プロパティ名）を配列として返します。値ではなく、キーのみを取り出すのが特徴です。'
   },
   {
     text: 'オブジェクトを文字列に変換するには？',
@@ -866,7 +867,8 @@ export const questions = [
       { text: 'obj.toText()', isCorrect: false },
       { text: 'string(obj)', isCorrect: false },
       { text: 'String.to(obj)', isCorrect: false }
-    ]
+    ],
+    explanation: 'JSON.stringify(obj) は、オブジェクトを JSON 形式の文字列に変換するメソッドです。Web API やローカルストレージに保存する際など、文字列として扱いたいときに使います。'
   },
   {
     text: 'オブジェクトを配列に変換する方法は？',
@@ -875,7 +877,8 @@ export const questions = [
       { text: 'obj.toArray()', isCorrect: false },
       { text: 'Array(obj)', isCorrect: false },
       { text: 'obj.push()', isCorrect: false }
-    ]
+    ],
+    explanation: 'Object.entries(obj) は、オブジェクトのキーと値のペアを [キー, 値] の形式で配列に変換します。各プロパティが小さな配列として格納され、配列の中に配列がある形になります。'
   },
   {
     text: '配列を文字列に変換するには？',
@@ -884,7 +887,8 @@ export const questions = [
       { text: 'concat()', isCorrect: false },
       { text: 'split()', isCorrect: false },
       { text: 'replace()', isCorrect: false }
-    ]
+    ],
+    explanation: 'join() は、配列のすべての要素を指定した区切り文字で連結し、1つの文字列として返すメソッドです。区切り文字を省略するとカンマ（,）で連結されます。'
   },
   {
     text: 'スプレッド構文の使い方は？',
@@ -893,7 +897,8 @@ export const questions = [
       { text: '[*array]', isCorrect: false },
       { text: '[array...]', isCorrect: false },
       { text: 'spread(array)', isCorrect: false }
-    ]
+    ],
+    explanation: 'スプレッド構文（...）は、配列やオブジェクトの中身を展開するために使われます。例えば [...array] のように書くことで、元の配列の要素を個別に展開して新しい配列を作ることができます。'
   },
   {
     text: '分割代入の例で正しいのは？',
@@ -902,7 +907,8 @@ export const questions = [
       { text: 'const a = array{0};', isCorrect: false },
       { text: 'let a := array[0];', isCorrect: false },
       { text: 'var a => array[0];', isCorrect: false }
-    ]
+    ],
+    explanation: '分割代入は、配列やオブジェクトの要素を個別の変数に簡単に代入する構文です。const [a, b] = array; のように書くと、array の最初の2つの要素が a と b にそれぞれ代入されます。'
   },
   {
     text: 'テンプレートリテラルの正しい書き方は？',
@@ -911,7 +917,8 @@ export const questions = [
       { text: '"こんにちは、${name}さん"', isCorrect: false },
       { text: "'こんにちは、$[name]さん'", isCorrect: false },
       { text: '`こんにちは、$(name)さん`', isCorrect: false }
-    ]
+    ],
+    explanation: 'テンプレートリテラルは、バッククォート（`）で囲み、${} の中に変数や式を書くことで文字列を動的に生成できます。例えば、`こんにちは、${name}さん` のように書きます。'
   },
   {
     text: '再代入が可能な変数の宣言方法は？',
@@ -920,7 +927,8 @@ export const questions = [
       { text: 'const', isCorrect: false },
       { text: 'define', isCorrect: false },
       { text: 'function', isCorrect: false }
-    ]
+    ],
+    explanation: 'let は再代入が可能な変数を宣言するためのキーワードです。const は再代入できない定数を宣言するために使います。define や function は変数の宣言には使いません。'
   },
   {
     text: '関数の即時実行（IIFE）の例は？',
@@ -929,7 +937,8 @@ export const questions = [
       { text: 'function(){};', isCorrect: false },
       { text: '(function){};', isCorrect: false },
       { text: 'call(function{})', isCorrect: false }
-    ]
+    ],
+    explanation: '即時実行関数（IIFE: Immediately Invoked Function Expression）は、関数を定義すると同時に実行する構文です。例として (function(){})(); のように、関数全体をカッコで囲み、最後に () をつけてすぐに実行します。'
   },
   {
     text: 'setIntervalの特徴は？',
@@ -938,7 +947,8 @@ export const questions = [
       { text: '一度だけ処理を行う', isCorrect: false },
       { text: 'ページを更新する', isCorrect: false },
       { text: '変数を監視する', isCorrect: false }
-    ]
+    ],
+    explanation: 'setInterval は、指定した時間間隔ごとに繰り返し関数を実行するためのメソッドです。処理を止めたい場合は clearInterval を使って停止する必要があります。'
   },
   {
     text: '非同期処理の予約語は？',
@@ -947,7 +957,8 @@ export const questions = [
       { text: 'defer', isCorrect: false },
       { text: 'delay', isCorrect: false },
       { text: 'thread', isCorrect: false }
-    ]
+    ],
+    explanation: 'async は非同期関数を定義するための予約語で、関数の前に付けることで、その関数が Promise を返すようになります。await とセットで使うことで、非同期処理を同期的に書くことができます。'
   },
   {
     text: 'awaitの役割は？',
@@ -956,7 +967,8 @@ export const questions = [
       { text: '関数を止める', isCorrect: false },
       { text: '関数の戻り値を取得する', isCorrect: false },
       { text: '条件分岐を作る', isCorrect: false }
-    ]
+    ],
+    explanation: 'await は、Promise が解決（または拒否）されるまで処理を一時停止し、その結果を取得します。async 関数の中でのみ使用でき、非同期処理を直感的に書けるようにします。'
   },
   {
     text: 'typeof [] の結果は？',
@@ -965,7 +977,8 @@ export const questions = [
       { text: '"array"', isCorrect: false },
       { text: '"list"', isCorrect: false },
       { text: '"collection"', isCorrect: false }
-    ]
+    ],
+    explanation: 'typeof [] は "object" を返します。JavaScriptでは配列もオブジェクトの一種として扱われるためです。配列かどうかを正確に判定するには Array.isArray() を使います。'
   },
   {
     text: 'JavaScriptで改行を入れるには？',
@@ -974,7 +987,8 @@ export const questions = [
       { text: '&br;', isCorrect: false },
       { text: '/n', isCorrect: false },
       { text: '<<br>>', isCorrect: false }
-    ]
+    ],
+    explanation: '\\n は、JavaScriptで文字列中に改行を入れるためのエスケープシーケンスです。文字列を表示する際に、\\n の部分で改行が反映されます（例：コンソールやテキスト出力）。'
   },
   {
     text: '配列のコピー（シャローコピー）は？',
@@ -983,7 +997,8 @@ export const questions = [
       { text: 'array.copy()', isCorrect: false },
       { text: 'array.slice(1)', isCorrect: false },
       { text: 'array.link()', isCorrect: false }
-    ]
+    ],
+    explanation: '[...array] はスプレッド構文を使ったシャローコピー（浅いコピー）です。元の配列と同じ要素を持つ新しい配列が作られますが、ネストされたオブジェクトまでは複製されません。'
   },
   {
     text: 'NaNかどうかの判定に使う関数は？',
@@ -992,7 +1007,8 @@ export const questions = [
       { text: 'isNull()', isCorrect: false },
       { text: 'checkNaN()', isCorrect: false },
       { text: 'typeofNaN()', isCorrect: false }
-    ]
+    ],
+    explanation: 'isNaN() は、引数の値が NaN（Not a Number）であるかどうかを判定するための関数です。ただし、非数値文字列も true を返すため、厳密にチェックしたい場合は Number.isNaN() の使用が推奨されます。'
   },
   {
     text: 'const obj = {}; obj.name = "A"; の結果は？',
@@ -1001,7 +1017,8 @@ export const questions = [
       { text: 'エラーになる', isCorrect: false },
       { text: '再代入とみなされる', isCorrect: false },
       { text: 'undefined になる', isCorrect: false }
-    ]
+    ],
+    explanation: 'const で宣言したオブジェクトは「再代入」はできませんが、中身（プロパティ）は変更・追加が可能です。そのため obj.name = "A" はエラーにならず、name プロパティが追加されます。'
   },
   {
     text: 'null == undefined の結果は？',
@@ -1010,7 +1027,8 @@ export const questions = [
       { text: 'false', isCorrect: false },
       { text: 'エラー', isCorrect: false },
       { text: 'undefined', isCorrect: false }
-    ]
+    ],
+    explanation: 'null == undefined は true を返します。これは抽象的な等価比較（==）では型変換が行われ、null と undefined は同じ「値がないこと」を表すため等しいとみなされるからです。ただし、===（厳密等価）では false になります。'
   },
   {
     text: 'null === undefined の結果は？',
@@ -1028,7 +1046,8 @@ export const questions = [
       { text: 'if ? then : else', isCorrect: false },
       { text: '条件 | true処理 , false処理', isCorrect: false },
       { text: '条件 => true : false', isCorrect: false }
-    ]
+    ],
+    explanation: 'null === undefined は false を返します。厳密等価演算子（===）では、型も値も同じでなければ true にならないため、型が異なる null と undefined は等しくありません。'
   },
   {
     text: 'typeof NaN の結果は？',
@@ -1037,7 +1056,8 @@ export const questions = [
       { text: '"NaN"', isCorrect: false },
       { text: '"undefined"', isCorrect: false },
       { text: '"null"', isCorrect: false }
-    ]
+    ],
+    explanation: 'typeof NaN は "number" を返します。NaN（Not a Number）は数値計算の結果として得られる特殊な値ですが、JavaScriptでは型としては「数値（number）」に分類されます。'
   },
   {
     text: '数値を文字列に変換する方法は？',
@@ -1046,7 +1066,8 @@ export const questions = [
       { text: '123.toText()', isCorrect: false },
       { text: 'text(123)', isCorrect: false },
       { text: 'toString(123)', isCorrect: false }
-    ]
+    ],
+    explanation: 'String(123) は数値を文字列に変換する方法の1つです。ラッパー関数 String() を使うことで、数値や他の型の値を簡単に文字列に変換できます。'
   },
   {
     text: '文字列を数値に変換するには？',
@@ -1055,7 +1076,8 @@ export const questions = [
       { text: 'parseNum("123")', isCorrect: false },
       { text: 'toNum("123")', isCorrect: false },
       { text: 'convert("123")', isCorrect: false }
-    ]
+    ],
+    explanation: 'Number("123") は、文字列を数値に変換する方法の1つです。数値として解釈できる文字列であれば、Number() 関数で正しく数値型に変換されます。'
   },
   {
     text: '関数の中で自分自身を参照するキーワードは？',
@@ -1064,7 +1086,8 @@ export const questions = [
       { text: 'self', isCorrect: false },
       { text: 'own', isCorrect: false },
       { text: 'me', isCorrect: false }
-    ]
+    ],
+    explanation: 'this は関数やオブジェクトの文脈の中で、自分自身を参照するためのキーワードです。呼び出し方によって指す対象が変わるため、使い方には注意が必要です。'
   },
   {
     text: 'JavaScriptで小数点以下を切り捨てるには？',
@@ -1073,7 +1096,8 @@ export const questions = [
       { text: 'Math.ceil()', isCorrect: false },
       { text: 'Math.round()', isCorrect: false },
       { text: 'parseInt()', isCorrect: false }
-    ]
+    ],
+    explanation: 'Math.floor() は、引数として与えた数値の小数点以下を切り捨てて、最も近い整数を返します。例えば Math.floor(4.9) は 4 を返します。'
   },
   {
     text: 'Math.ceil(2.3) の結果は？',
@@ -1082,7 +1106,8 @@ export const questions = [
       { text: '2', isCorrect: false },
       { text: '2.3', isCorrect: false },
       { text: 'undefined', isCorrect: false }
-    ]
+    ],
+    explanation: 'Math.ceil(2.3) は、小数点以下を切り上げて最も近い整数を返します。この場合、2.3 は 3 に切り上げられるため、結果は 3 になります。'
   },
   {
     text: 'Math.round(4.6) の結果は？',
@@ -1091,7 +1116,8 @@ export const questions = [
       { text: '4', isCorrect: false },
       { text: '4.5', isCorrect: false },
       { text: 'undefined', isCorrect: false }
-    ]
+    ],
+    explanation: 'Math.round(4.6) は、四捨五入して最も近い整数を返します。4.6 は 5 に四捨五入されるため、結果は 5 になります。'
   },
   {
     text: '文字列の長さを取得するには？',
@@ -1100,7 +1126,8 @@ export const questions = [
       { text: 'str.size', isCorrect: false },
       { text: 'length(str)', isCorrect: false },
       { text: 'str.count()', isCorrect: false }
-    ]
+    ],
+    explanation: 'str.length は、文字列の文字数（長さ）を取得するプロパティです。配列にも使われ、要素数を調べることができます。'
   },
   {
     text: '文字列を1文字ずつ分割するには？',
@@ -1109,7 +1136,8 @@ export const questions = [
       { text: 'split(" ")', isCorrect: false },
       { text: 'split(",", 1)', isCorrect: false },
       { text: 'join("")', isCorrect: false }
-    ]
+    ],
+    explanation: 'split("") は、文字列を1文字ずつに分割して配列に変換するメソッドです。空文字を区切り文字として指定することで、各文字が配列の要素として分けられます。'
   },
   {
     text: '配列の最後の要素を取り出すには？',
@@ -1118,7 +1146,8 @@ export const questions = [
       { text: 'shift()', isCorrect: false },
       { text: 'slice()', isCorrect: false },
       { text: 'push()', isCorrect: false }
-    ]
+    ],
+    explanation: 'pop() は、配列の最後の要素を取り出して削除するメソッドです。取り出した要素は戻り値として返され、元の配列からはその要素がなくなります。'
   },
   {
     text: '配列の先頭の要素を取り出すには？',
@@ -1127,7 +1156,8 @@ export const questions = [
       { text: 'pop()', isCorrect: false },
       { text: 'unshift()', isCorrect: false },
       { text: 'splice()', isCorrect: false }
-    ]
+    ],
+    explanation: 'shift() は、配列の先頭の要素を取り出して削除するメソッドです。取り出した要素は戻り値として返され、配列の残りの要素は前に詰められます。'
   },
   {
     text: '配列に要素を先頭に追加するには？',
@@ -1136,7 +1166,8 @@ export const questions = [
       { text: 'push()', isCorrect: false },
       { text: 'shift()', isCorrect: false },
       { text: 'concat()', isCorrect: false }
-    ]
+    ],
+    explanation: 'unshift() は、配列の先頭に1つ以上の要素を追加するメソッドです。追加された後は、既存の要素が後ろにずれて、新しい要素が最初に来ます。'
   },
   {
     text: 'parseInt("08")の結果は？',
@@ -1145,7 +1176,8 @@ export const questions = [
       { text: '0', isCorrect: false },
       { text: 'NaN', isCorrect: false },
       { text: '"08"', isCorrect: false }
-    ]
+    ],
+    explanation: 'parseInt("08") は、文字列 "08" を整数に変換し、結果は 8 になります。10進数として解釈されるため、先頭の 0 は無視されます。ただし、第2引数に基数（例：10）を明示するのが安全です。'
   },
   {
     text: '配列に要素が含まれているか調べるには？',
@@ -1154,7 +1186,8 @@ export const questions = [
       { text: 'has()', isCorrect: false },
       { text: 'exist()', isCorrect: false },
       { text: 'check()', isCorrect: false }
-    ]
+    ],
+    explanation: 'includes() は、配列に特定の値が含まれているかどうかを調べるメソッドです。true または false を返し、条件分岐などによく使われます。'
   },
   {
     text: '配列を逆順に並べ替えるには？',
@@ -1163,7 +1196,8 @@ export const questions = [
       { text: 'sort()', isCorrect: false },
       { text: 'map().reverse()', isCorrect: false },
       { text: 'join().split()', isCorrect: false }
-    ]
+    ],
+    explanation: 'reverse() は、配列の要素を元の順序を反転させて並び替えるメソッドです。元の配列自体が変更される点に注意が必要です。'
   },
   {
     text: 'typeof null の結果は？',
@@ -1172,7 +1206,8 @@ export const questions = [
       { text: '"null"', isCorrect: false },
       { text: '"undefined"', isCorrect: false },
       { text: '"boolean"', isCorrect: false }
-    ]
+    ],
+    explanation: 'typeof null は "object" を返します。これは JavaScript の歴史的な仕様によるもので、null はオブジェクトではありませんが、typeof 演算子では誤って "object" と判定されます。'
   },
   {
     text: 'undefined の typeof の結果は？',
@@ -1181,7 +1216,8 @@ export const questions = [
       { text: '"null"', isCorrect: false },
       { text: '"object"', isCorrect: false },
       { text: '"NaN"', isCorrect: false }
-    ]
+    ],
+    explanation: 'typeof undefined は "undefined" を返します。これは、変数が宣言されたが値が代入されていないときなどに現れる未定義の状態を示す型です。'
   },
   {
     text: '文字列の先頭を確認するには？',
@@ -1190,7 +1226,8 @@ export const questions = [
       { text: 'beginsWith()', isCorrect: false },
       { text: 'first()', isCorrect: false },
       { text: 'substring(0)', isCorrect: false }
-    ]
+    ],
+    explanation: 'startsWith() は、文字列が特定の文字列で始まっているかを判定するメソッドです。true または false を返し、条件分岐などに活用されます。'
   },
   {
     text: '値が falsy に含まれないのは？',
@@ -1199,7 +1236,8 @@ export const questions = [
       { text: '0', isCorrect: false },
       { text: '""', isCorrect: false },
       { text: 'null', isCorrect: false }
-    ]
+    ],
+    explanation: '[]（空の配列）は JavaScript では truthy 値として扱われます。falsy に含まれるのは 0、""（空文字）、null、undefined、NaN、false などです。'
   },
   {
     text: '「==」の特徴は？',
@@ -1208,7 +1246,8 @@ export const questions = [
       { text: '厳密な比較', isCorrect: false },
       { text: 'オブジェクト専用', isCorrect: false },
       { text: '比較できない', isCorrect: false }
-    ]
+    ],
+    explanation: '== は「抽象的な等価演算子」で、比較する前に型を自動的に変換してから値を比べます。そのため異なる型でも同じ値とみなされることがあります。'
   },
   {
     text: '「===」の特徴は？',
@@ -1217,7 +1256,8 @@ export const questions = [
       { text: '値だけ比較', isCorrect: false },
       { text: '文字列専用', isCorrect: false },
       { text: 'nullだけ比較', isCorrect: false }
-    ]
+    ],
+    explanation: '=== は「厳密等価演算子」で、型も値も両方が一致する場合にのみ true を返します。型が異なる場合は自動的な型変換を行わず、常に false になります。'
   },
   {
     text: 'forEach()の戻り値は？',
@@ -1226,7 +1266,8 @@ export const questions = [
       { text: '配列', isCorrect: false },
       { text: '数値', isCorrect: false },
       { text: 'boolean', isCorrect: false }
-    ]
+    ],
+    explanation: 'forEach() は配列の各要素に対して指定した関数を1回ずつ実行しますが、戻り値は常に undefined です。新しい配列を作りたい場合は map() を使います。'
   },
   {
     text: 'map()とforEach()の違いは？',
@@ -1235,7 +1276,8 @@ export const questions = [
       { text: 'mapは処理を止められる', isCorrect: false },
       { text: 'forEachは値を返す', isCorrect: false },
       { text: 'mapはundefinedを返す', isCorrect: false }
-    ]
+    ],
+    explanation: 'map() は配列の各要素に処理を適用し、その結果を元に新しい配列を返します。一方 forEach() は繰り返し処理を行うだけで、何も値を返しません（戻り値は undefined です）。'
   },
   {
     text: 'イベントが発火した要素を取得するには？',
@@ -1244,7 +1286,8 @@ export const questions = [
       { text: 'this.element', isCorrect: false },
       { text: 'event.source', isCorrect: false },
       { text: 'getElement(event)', isCorrect: false }
-    ]
+    ],
+    explanation: 'event.target は、イベントが発生した実際の要素（クリックされたボタンなど）を指します。イベントリスナー内で使うことで、どの要素でイベントが起きたかを特定できます。'
   },
   {
     text: 'HTMLのクラスを取得するには？',
@@ -1253,7 +1296,8 @@ export const questions = [
       { text: 'document.getElementById()', isCorrect: false },
       { text: 'document.querySelectorAll()', isCorrect: false },
       { text: 'document.getElements()', isCorrect: false }
-    ]
+    ],
+    explanation: 'document.getElementsByClassName() は、指定したクラス名を持つすべての要素を HTMLCollection として取得するメソッドです。複数の要素が対象になる場合に使います。'
   },
   {
     text: '条件に一致する最初の要素を取得するには？',
@@ -1262,7 +1306,8 @@ export const questions = [
       { text: 'document.querySelectorAll()', isCorrect: false },
       { text: 'getElementByClass()', isCorrect: false },
       { text: 'selectElement()', isCorrect: false }
-    ]
+    ],
+    explanation: 'document.querySelector() は、指定したCSSセレクタに一致する最初の要素を1つだけ取得します。ID・クラス・タグ名など、幅広いセレクタが使えるのが特徴です。'
   },
   {
     text: '文字列を数値に変換するには？',
@@ -1271,7 +1316,8 @@ export const questions = [
       { text: 'String()', isCorrect: false },
       { text: 'split()', isCorrect: false },
       { text: 'toFixed()', isCorrect: false }
-    ]
+    ],
+    explanation: 'parseInt() は、文字列を整数に変換する関数です。先頭から数値として認識できる部分を読み取り、整数に変換します。小数や基数（進数）に注意が必要です。'
   },
   {
     text: '関数を一度だけ実行したいときの関数は？',
@@ -1280,7 +1326,8 @@ export const questions = [
       { text: '無名関数', isCorrect: false },
       { text: 'コールバック関数', isCorrect: false },
       { text: 'setInterval', isCorrect: false }
-    ]
+    ],
+    explanation: '即時関数（IIFE）は、定義と同時にその場で一度だけ実行される関数です。主にスコープを限定したり、一度きりの初期化処理に使われます。'
   },
   {
     text: 'setIntervalの役割は？',
@@ -1289,7 +1336,8 @@ export const questions = [
       { text: '一度だけ処理を行う', isCorrect: false },
       { text: 'HTMLを更新する', isCorrect: false },
       { text: '要素を非表示にする', isCorrect: false }
-    ]
+    ],
+    explanation: 'setInterval は、指定した時間ごとに同じ処理を繰り返し実行するための関数です。繰り返しを止めるには clearInterval を使います。'
   },
   {
     text: 'if文の構文で正しいのは？',
@@ -1298,7 +1346,8 @@ export const questions = [
       { text: 'if 条件 then { 処理 }', isCorrect: false },
       { text: 'if: { 処理 }', isCorrect: false },
       { text: '条件 if { 処理 }', isCorrect: false }
-    ]
+    ],
+    explanation: 'JavaScriptの if 文は、if (条件) { 処理 } のように書きます。条件が true のときに中括弧内の処理が実行されます。条件式と中括弧は必須です。'
   },
   {
     text: '要素を非表示にするCSSは？',
@@ -1307,7 +1356,8 @@ export const questions = [
       { text: 'display: hidden;', isCorrect: false },
       { text: 'visibility: block;', isCorrect: false },
       { text: 'opacity: 100;', isCorrect: false }
-    ]
+    ],
+    explanation: 'display: none; は、HTML要素を完全に非表示にし、ページのレイアウトからも取り除きます。再表示するには display プロパティを元に戻す必要があります。'
   },
   {
     text: 'JSで非表示にするには？',
@@ -1316,7 +1366,8 @@ export const questions = [
       { text: 'element.hidden = false', isCorrect: false },
       { text: 'element.class = "hidden"', isCorrect: false },
       { text: 'display.none()', isCorrect: false }
-    ]
+    ],
+    explanation: 'element.style.display = "none" は、JavaScriptで要素を非表示にする方法です。CSSの display プロパティを直接操作することで、対象の要素を画面から隠すことができます。'
   },
   {
     text: 'NaNの判定で使う関数は？',
@@ -1325,7 +1376,8 @@ export const questions = [
       { text: 'NaN()', isCorrect: false },
       { text: 'isNull()', isCorrect: false },
       { text: 'checkNaN()', isCorrect: false }
-    ]
+    ],
+    explanation: 'isNaN() は、値が NaN（Not a Number）かどうかを判定する関数です。ただし、数値でない文字列なども true を返すことがあるため、より厳密な判定には Number.isNaN() の使用が推奨されます。'
   },
   {
     text: '数値を文字列に変換するには？',
@@ -1334,7 +1386,8 @@ export const questions = [
       { text: 'Number()', isCorrect: false },
       { text: 'parseInt()', isCorrect: false },
       { text: 'String.to()', isCorrect: false }
-    ]
+    ],
+    explanation: 'toString() は、数値を文字列に変換するメソッドです。例えば 123.toString() は "123" を返します。数値以外のデータ型にも使用できますが、null や undefined には使えません。'
   },
   {
     text: 'テンプレート文字列で使う記号は？',
@@ -1343,7 +1396,8 @@ export const questions = [
       { text: '"ダブルクォート"', isCorrect: false },
       { text: "'シングルクォート'", isCorrect: false },
       { text: '<テンプレート>', isCorrect: false }
-    ]
+    ],
+    explanation: 'テンプレート文字列（テンプレートリテラル）は、バッククォート（`）で囲んで使います。${} の中に変数や式を埋め込むことで、文字列を柔軟に組み立てることができます。'
   },
   {
     text: 'スプレッド構文の記号は？',
@@ -1352,7 +1406,8 @@ export const questions = [
       { text: '@@', isCorrect: false },
       { text: '::', isCorrect: false },
       { text: '=>', isCorrect: false }
-    ]
+    ],
+    explanation: 'スプレッド構文は「...」を使って、配列やオブジェクトの中身を展開します。配列のコピーや結合、関数の引数展開などに使われる便利な記法です。'
   },
   {
     text: 'nullとundefinedの違いは？',
@@ -1361,7 +1416,8 @@ export const questions = [
       { text: 'どちらも同じ', isCorrect: false },
       { text: 'undefinedはエラー', isCorrect: false },
       { text: 'nullは関数名', isCorrect: false }
-    ]
+    ],
+    explanation: 'null は「意図的に値がない」ことを示す値で、プログラマーが明示的に設定するものです。一方、undefined は「値が未定義の状態」で、変数に値が代入されていないときなどに自動的に設定されます。'
   },
   {
     text: '文字列の一部を取り出すには？',
@@ -1370,7 +1426,8 @@ export const questions = [
       { text: 'split()', isCorrect: false },
       { text: 'push()', isCorrect: false },
       { text: 'splice()', isCorrect: false }
-    ]
+    ],
+    explanation: 'slice() は、文字列や配列から特定の範囲を取り出すためのメソッドです。文字列に対して使うと、指定した開始位置から終了位置の直前までの部分文字列を返します。'
   },
   {
     text: 'querySelectorAll()の戻り値は？',
@@ -1379,7 +1436,8 @@ export const questions = [
       { text: '配列', isCorrect: false },
       { text: 'HTMLCollection', isCorrect: false },
       { text: 'オブジェクト', isCorrect: false }
-    ]
+    ],
+    explanation: 'querySelectorAll() の戻り値は NodeList です。これは配列のようにインデックスでアクセスできますが、厳密には配列ではありません。必要に応じて Array.from() などで配列に変換できます。'
   },
   {
     text: 'クラス名を追加するには？',
@@ -1388,7 +1446,8 @@ export const questions = [
       { text: 'element.class +=', isCorrect: false },
       { text: 'element.addClass()', isCorrect: false },
       { text: 'element.setClass()', isCorrect: false }
-    ]
+    ],
+    explanation: 'element.classList.add() は、指定したクラス名を要素に追加するメソッドです。すでに同じクラスがある場合は重複せず、安全にクラスを操作できます。'
   },
   {
     text: 'インクリメント演算子は？',
@@ -1397,7 +1456,8 @@ export const questions = [
       { text: '+', isCorrect: false },
       { text: '--', isCorrect: false },
       { text: '**', isCorrect: false }
-    ]
+    ],
+    explanation: '++ はインクリメント演算子で、数値を 1 増やすために使います。前置（++x）と後置（x++）の2つの使い方があり、タイミングによって返り値が異なります。'
   },
   {
     text: 'forEachの中でreturnすると？',
@@ -1406,7 +1466,8 @@ export const questions = [
       { text: 'すべて終了する', isCorrect: false },
       { text: '何も変わらない', isCorrect: false },
       { text: 'falseが返る', isCorrect: false }
-    ]
+    ],
+    explanation: 'forEach の中で return を使うと、その1回のループ処理を中断して次の要素に進みます。ただし、break や continue のようにループ全体を制御することはできません。'
   },
   {
     text: '三項演算子の正しい形式は？',
@@ -1415,7 +1476,8 @@ export const questions = [
       { text: 'if ? then : else', isCorrect: false },
       { text: '条件 if 値 else 値', isCorrect: false },
       { text: '条件 : 値1 ? 値2', isCorrect: false }
-    ]
+    ],
+    explanation: '三項演算子は、条件 ? 値1 : 値2 の形式で書きます。条件が true の場合は 値1、false の場合は 値2 が返される、簡潔な if-else 書き換え構文です。'
   },
   {
     text: '画面が読み込まれた後に処理したい場合は？',
@@ -1424,7 +1486,8 @@ export const questions = [
       { text: 'window.ready()', isCorrect: false },
       { text: 'DOMContentLoaded()', isCorrect: false },
       { text: 'load.start()', isCorrect: false }
-    ]
+    ],
+    explanation: 'window.onload は、ページ内の画像やCSSなどすべてのリソースの読み込みが完了した後に実行されるイベントです。完全に読み込まれたタイミングで処理を行いたいときに使います。'
   }
 ];
 

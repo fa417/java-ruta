@@ -91,7 +91,6 @@ footer p {
 /* game-question */
 .question-title {
   color: var(--white-color);
-  font-family: 'Zen Maru Gothic', sans-serif;
   font-size: var(--font-size-14px);
   text-align: center;
 }
