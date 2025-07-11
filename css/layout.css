@@ -51,6 +51,16 @@ footer {
   z-index: 0;
 }
 
+.start,
+.answer,
+.one-more,
+.home,
+.end {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  touch-action: manipulation;
+}
+
 /*  */
 
 /* game-start */
