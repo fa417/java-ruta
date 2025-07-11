@@ -1,6 +1,7 @@
 import { questions } from "./question.js";
 
 document.addEventListener('DOMContentLoaded', () => {
+
   const first = document.getElementById('game-start');
   const questionPage = document.getElementById('question');
   const start = document.getElementById('start-btn');
@@ -23,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     countIndex = 0;
     countNumber = 0;
-    randomQuestion = [...questions].sort(() => Math.random() - 0.5).slice(0, 2);
+    randomQuestion = [...questions].sort(() => Math.random() - 0.5).slice(0, 20);
 
     showQuestion();
   });
@@ -99,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
     questionPage.style.display = 'none';
     document.getElementById('game-end').style.display = 'block';
     document.getElementById('acquisition').textContent = `${countNumber}枚`;
-    document.getElementById('not-earned').textContent = `${2 - countNumber}枚`;
+    document.getElementById('not-earned').textContent = `${20 - countNumber}枚`;
 
     const allBanner = document.getElementById('all-banner');
     allBanner.innerHTML = `<span style="font-size: 16px;">20枚</span> / ${countNumber}枚獲得`;
@@ -118,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('cards-number').textContent = '0枚';
 
     randomQuestion.length = 0;
-    randomQuestion.push(...[...questions].sort(() => Math.random() - 0.5).slice(0, 2));
+    randomQuestion.push(...[...questions].sort(() => Math.random() - 0.5).slice(0, 20));
 
     end.style.display = 'none';
     questionPage.style.display = 'block';
@@ -133,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('cards-number').textContent = '0枚';
 
     randomQuestion.length = 0;
-    randomQuestion.push(...[...questions].sort(() => Math.random() - 0.5).slice(0, 2));
+    randomQuestion.push(...[...questions].sort(() => Math.random() - 0.5).slice(0, 20));
 
     end.style.display = 'none';
     questionPage.style.display = 'block';
