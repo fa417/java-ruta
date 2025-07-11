@@ -121,7 +121,7 @@ document.getElementById('retry-btn').addEventListener('click', () => {
 
   end.style.display = 'none';
   questionPage.style.display = 'block';
-  answer.style.display='none';
+  answer.style.display = 'none';
 
   showQuestion();
 });
@@ -174,6 +174,13 @@ document.getElementById('answer-btn').addEventListener('click', () => {
   });
 });
 // 
+
+document.getElementById('end-btn').addEventListener('click', () => {
+  end.style.display = 'block';
+  answer.style.display = 'none';
+  first.style.display = 'none';
+  questionPage.style.display = 'none';
+});
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('./js/service-worker.js')
