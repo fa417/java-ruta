@@ -93,6 +93,7 @@ footer p {
   color: var(--white-color);
   font-size: var(--font-size-14px);
   text-align: center;
+  letter-spacing: 0.3rem;
 }
 
 .text {
@@ -197,22 +198,30 @@ footer p {
 .count-number {
   color: var(--white-color);
   font-size: var(--font-size-14px);
+  font-weight: var(--font-weight-bold);
   text-align: center;
+  letter-spacing: 0.3rem;
 }
 
 .question-text {
   font-size: var(--font-size-24px);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-regular);
   text-align: justify;
 }
 
 .answer-correct {
   color: var(--red-color);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-bold);
   text-align: justify;
 }
 
+.label{
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.2rem;
+}
+
 .answer-explanation {
+  font-size: var(--font-size-16px);
   text-align: justify;
 }
 

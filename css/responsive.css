@@ -125,6 +125,7 @@
   }
 
   .result-next-banner {
+    padding: 10px 20px;
     width: 40%;
   }
 
@@ -194,10 +195,28 @@
   /*  */
 
   /* game-answer */
-  .answer-wrapper{
+  .answer-wrapper {
     margin: 70px auto;
     width: 90%;
   }
+
+  .count-number {
+    margin: 0 auto 20px;
+  }
+
+  .question-text {
+    text-align: center;
+  }
+
+  .answer-correct {
+    margin: 10px 0 40px;
+    text-align: center;
+  }
+
+  .answer-explanation {
+    font-size: var(--font-size-18px);
+  }
+
   /*  */
 }
 
@@ -286,7 +305,7 @@
   .text {
     font-size: var(--font-size-24px);
     text-align: center;
-    margin-top: 10px;
+    margin-top: 20px;
   }
 
   .cards {
@@ -374,15 +393,50 @@
     width: 80%;
   }
 
+  .answer,
+  .end {
+    padding: 10px 20px;
+  }
+
   .game-links {
     gap: 40px;
     margin: auto;
     width: 80%;
   }
 
+  .game-links-row2 {
+    gap: 40px;
+  }
+
   .one-more,
   .home {
-    padding: 10px 40px;
+    padding: 10px 20px;
+  }
+
+  /*  */
+
+  /* game-answer */
+  .answer-wrapper {
+    margin: 80px auto;
+    width: 80%;
+  }
+
+  .count-number {
+    margin: 0 auto 30px;
+  }
+
+  .question-text {
+    text-align: center;
+  }
+
+  .answer-correct {
+    margin: 10px 0 40px;
+    text-align: center;
+  }
+
+  .answer-explanation {
+    font-size: var(--font-size-18px);
+    padding: 20px 10px;
   }
 
   /*  */
@@ -475,7 +529,7 @@
   .text {
     font-size: var(--font-size-24px);
     text-align: center;
-    margin-top: 10px;
+    margin-top: 20px;
   }
 
   .cards {
@@ -570,9 +624,45 @@
     width: 70%;
   }
 
+  .answer,
+  .end {
+    padding: 10px 20px;
+  }
+
+  .game-links-row2 {
+    gap: 40px;
+  }
+
   .one-more,
   .home {
-    padding: 10px 40px;
+    padding: 10px 20px;
+  }
+
+  /*  */
+
+  /* game-answer */
+  .answer-wrapper {
+    margin: 90px auto;
+    width: 70%;
+  }
+
+  .count-number {
+    margin: 0 auto 30px;
+    width: 20%;
+  }
+
+  .question-text {
+    text-align: center;
+  }
+
+  .answer-correct {
+    margin: 10px 0 40px;
+    text-align: center;
+  }
+
+  .answer-explanation {
+    font-size: var(--font-size-18px);
+    padding: 20px 10px;
   }
 
   /*  */
