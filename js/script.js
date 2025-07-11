@@ -179,9 +179,13 @@ document.getElementById('answer-btn').addEventListener('click', () => {
     const block = document.createElement('div');
     block.className = 'answer-block';
 
+    const number = document.createElement('p');
+    number.className = 'count-number';
+    number.textContent = `第${index + 1}問`;
+
     const question = document.createElement('p');
     question.className = 'question-text';
-    question.textContent = `Q${index + 1}.${q.text}`;
+    question.textContent = q.text;
 
     const correct = document.createElement('p');
     correct.className = 'answer-correct';
@@ -189,8 +193,9 @@ document.getElementById('answer-btn').addEventListener('click', () => {
 
     const explanation = document.createElement('p');
     explanation.className = 'answer-explanation';
-    explanation.textContent = q.explanation;
+    explanation.innerHTML = `<span class="label">解説</span>${q.explanation}`;
 
+    block.appendChild(number);
     block.appendChild(question);
     block.appendChild(correct);
     block.appendChild(explanation);

@@ -177,6 +177,27 @@
     width: 90%;
   }
 
+  .answer,
+  .end {
+    padding: 10px 20px;
+  }
+
+  .game-links-row2 {
+    gap: 30px;
+  }
+
+  .one-more,
+  .home {
+    padding: 10px 20px;
+  }
+
+  /*  */
+
+  /* game-answer */
+  .answer-wrapper{
+    margin: 70px auto;
+    width: 90%;
+  }
   /*  */
 }
 

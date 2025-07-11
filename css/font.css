@@ -79,7 +79,7 @@ footer p {
   text-align: center;
 }
 
-.start{
+.start {
   color: var(--white-color);
   font-family: 'Zen Maru Gothic', sans-serif;
   font-size: var(--font-size-24px);
@@ -106,7 +106,7 @@ footer p {
   text-align: center;
 }
 
-.end-coment{
+.end-coment {
   color: var(--red-color);
   font-size: var(--font-size-14px);
   font-family: 'Zen Maru Gothic', sans-serif;
@@ -124,7 +124,7 @@ footer p {
 }
 
 .result-next-banner,
-.showresult-button{
+.showresult-button {
   font-size: var(--font-size-16px);
   font-family: 'Zen Maru Gothic', sans-serif;
   font-weight: var(--font-weight-medium);
@@ -182,11 +182,38 @@ footer p {
   text-align: center;
 }
 
+.answer,
 .one-more,
-.home {
-  font-family: 'Noto Serif JP', serif;
+.home,
+.end {
+  font-family: 'Zen Maru Gothic', sans-serif;
   font-size: var(--font-size-18px);
   font-weight: var(--font-weight-medium);
+}
+
+/*  */
+
+/* game-answer */
+.count-number {
+  color: var(--white-color);
+  font-size: var(--font-size-14px);
+  text-align: center;
+}
+
+.question-text {
+  font-size: var(--font-size-24px);
+  font-weight: var(--font-weight-bold);
+  text-align: justify;
+}
+
+.answer-correct {
+  color: var(--red-color);
+  font-weight: var(--font-weight-regular);
+  text-align: justify;
+}
+
+.answer-explanation {
+  text-align: justify;
 }
 
 /*  */
