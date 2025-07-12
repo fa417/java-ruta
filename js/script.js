@@ -1,6 +1,13 @@
 import { questions } from "./question.js";
 
 document.addEventListener('DOMContentLoaded', () => {
+  const params = new URLSearchParams(window.location.search);
+  const from = params.get('from');
+
+  const backLink = document.getElementById('back-home');
+  if (from === 'portfolio') {
+    backLink.style.display = 'inline';
+  }
 
   const first = document.getElementById('game-start');
   const questionPage = document.getElementById('question');
