@@ -453,6 +453,7 @@
 
   .question-text {
     text-align: center;
+    font-size: var(--font-size-24px);
   }
 
   .answer-correct {
@@ -709,6 +710,7 @@
 
   .question-text {
     text-align: center;
+    font-size: var(--font-size-24px);
   }
 
   .answer-correct {
