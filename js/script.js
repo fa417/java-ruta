@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const start = document.getElementById('start-btn');
   const end = document.getElementById('game-end');
   const answer = document.getElementById('game-answer');
+  const answerpage2 = document.getElementById('game-answer2');
 
   const questionContent = document.getElementById('question-count');
   const questionText = document.getElementById('question-text');
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     questionPage.style.display = 'block';
     end.style.display = 'none';
     answer.style.display = 'none';
+    answerpage2.style.display = 'none';
 
     countIndex = 0;
     countNumber = 0;
@@ -96,6 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   // 
 
+  // questionから結果を見るボタン処理
   document.getElementById('showresult').addEventListener('click', () => {
     questionPage.style.display = 'none';
     document.getElementById('game-end').style.display = 'block';
@@ -105,12 +108,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const allBanner = document.getElementById('all-banner');
     allBanner.innerHTML = `<span style="font-size: 16px;">20枚</span> / ${countNumber}枚獲得`;
   });
+  // 
 
   // 問題数カウント
   nextBanner.addEventListener('click', () => {
     countIndex++;
     showQuestion();
   });
+  // 
 
   // もう１回遊ぶボタン処理
   document.getElementById('retry-btn').addEventListener('click', () => {
@@ -124,6 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
     end.style.display = 'none';
     questionPage.style.display = 'block';
     answer.style.display = 'none';
+    answerpage2.style.display = 'none';
 
     showQuestion();
   });
@@ -139,6 +145,23 @@ document.addEventListener('DOMContentLoaded', () => {
     end.style.display = 'none';
     questionPage.style.display = 'block';
     answer.style.display = 'none';
+    answerpage2.style.display = 'none';
+
+    showQuestion();
+  });
+
+  document.getElementById('retry-btn-answer2').addEventListener('click', () => {
+    countIndex = 0;
+    countNumber = 0;
+    document.getElementById('cards-number').textContent = '0枚';
+
+    randomQuestion.length = 0;
+    randomQuestion.push(...[...questions].sort(() => Math.random() - 0.5).slice(0, 20));
+
+    end.style.display = 'none';
+    questionPage.style.display = 'block';
+    answer.style.display = 'none';
+    answerpage2.style.display = 'none';
 
     showQuestion();
   });
@@ -154,6 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
     end.style.display = 'none';
     questionPage.style.display = 'none';
     answer.style.display = 'none';
+    answerpage2.style.display = 'none';
   });
 
   document.getElementById('home-btn-answer').addEventListener('click', () => {
@@ -165,6 +189,19 @@ document.addEventListener('DOMContentLoaded', () => {
     end.style.display = 'none';
     questionPage.style.display = 'none';
     answer.style.display = 'none';
+    answerpage2.style.display = 'none';
+  });
+
+  document.getElementById('home-btn-answer2').addEventListener('click', () => {
+    countIndex = 0;
+    countNumber = 0;
+    document.getElementById('cards-number').textContent = '0枚';
+
+    first.style.display = 'flex';
+    end.style.display = 'none';
+    questionPage.style.display = 'none';
+    answer.style.display = 'none';
+    answerpage2.style.display = 'none';
   });
   // 
 
@@ -177,7 +214,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     answerArea.innerHTML = '';
 
-    randomQuestion.forEach((q, index) => {
+    // 1ページ目
+    randomQuestion.slice(0, 10).forEach((q, index) => {
       const correctAnswer = q.answer.find(ans => ans.isCorrect).text;
 
       const block = document.createElement('div');
@@ -206,6 +244,57 @@ document.addEventListener('DOMContentLoaded', () => {
 
       answerArea.appendChild(block);
     });
+
+    // 2ページ目
+    randomQuestion.slice(10, 20).forEach((q, index) => {
+      const correctAnswer = q.answer.find(ans => ans.isCorrect).text;
+
+      const block = document.createElement('div');
+      block.className = 'answer-block';
+
+      const number = document.createElement('p');
+      number.className = 'count-number';
+      number.textContent = `第${index + 11}問`;
+
+      const question = document.createElement('p');
+      question.className = 'question-text';
+      question.textContent = q.text;
+
+      const correct = document.createElement('p');
+      correct.className = 'answer-correct';
+      correct.textContent = `正解：${correctAnswer}`;
+
+      const explanation = document.createElement('p');
+      explanation.className = 'answer-explanation';
+      explanation.innerHTML = `<span class="label">解説</span>${q.explanation}`;
+
+      block.appendChild(number);
+      block.appendChild(question);
+      block.appendChild(correct);
+      block.appendChild(explanation);
+
+      document.getElementById('answer-area2').appendChild(block);
+    });
+  });
+  // 
+
+  // 1ページ目「次へ」
+  document.getElementById('next2').addEventListener('click', () => {
+    answerpage2.style.display = 'block';
+    end.style.display = 'none';
+    answer.style.display = 'none';
+    first.style.display = 'none';
+    questionPage.style.display = 'none';
+  });
+  // 
+
+  // 2ページ目「戻る」
+  document.getElementById('return1').addEventListener('click', () => {
+    answer.style.display = 'block';
+    answerpage2.style.display = 'none';
+    end.style.display = 'none';
+    first.style.display = 'none';
+    questionPage.style.display = 'none';
   });
   // 
 
@@ -215,8 +304,17 @@ document.addEventListener('DOMContentLoaded', () => {
     answer.style.display = 'none';
     first.style.display = 'none';
     questionPage.style.display = 'none';
+    answerpage2.style.display = 'none';
   });
-  // 
+
+  document.getElementById('end-btn2').addEventListener('click', () => {
+    end.style.display = 'block';
+    answer.style.display = 'none';
+    first.style.display = 'none';
+    questionPage.style.display = 'none';
+    answerpage2.style.display = 'none';
+  });
+  //
 });
 
 if ('serviceWorker' in navigator) {

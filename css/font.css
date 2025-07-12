@@ -186,7 +186,9 @@ footer p {
 .answer,
 .one-more,
 .home,
-.end {
+.end,
+.next-page,
+.return-page{
   font-family: 'Zen Maru Gothic', sans-serif;
   font-size: var(--font-size-18px);
   font-weight: var(--font-weight-medium);
@@ -204,7 +206,7 @@ footer p {
 }
 
 .question-text {
-  font-size: var(--font-size-24px);
+  font-size: var(--font-size-18px);
   font-weight: var(--font-weight-regular);
   text-align: justify;
 }

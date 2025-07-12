@@ -180,7 +180,9 @@
   }
 
   .answer,
-  .end {
+  .end,
+  .next-page,
+  .return-page {
     padding: 10px 20px;
   }
 
@@ -405,7 +407,9 @@
   }
 
   .answer,
-  .end {
+  .end,
+  .next-page,
+  .return-page {
     padding: 20px;
     border-radius: 40px;
   }
@@ -662,7 +666,9 @@
   }
 
   .answer,
-  .end {
+  .end,
+  .next-page,
+  .return-page {
     padding: 20px;
     border-radius: 40px;
   }
@@ -680,7 +686,9 @@
   .answer:hover,
   .one-more:hover,
   .home:hover,
-  .end:hover {
+  .end:hover,
+  .next-page:hover,
+  .return-page:hover {
     color: var(--white-color);
     background: var(--black-color);
     border: none;

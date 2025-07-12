@@ -223,7 +223,9 @@ footer {
 }
 
 .answer,
-.end {
+.end,
+.next-page,
+.return-page{
   padding: 5px 10px;
   width: 100%;
 }
