@@ -257,7 +257,7 @@
   }
 
   /*  */
-  
+
   /* game-start */
   .title-area {
     font-size: var(--font-size-24px);
@@ -508,7 +508,12 @@
     background-size: auto;
   }
 
+  .home-link {
+    display: none;
+  }
+
   /*  */
+  
   /* game-start */
   .title-area {
     font-size: var(--font-size-24px);
