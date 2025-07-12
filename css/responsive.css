@@ -40,6 +40,11 @@
     background-size: contain;
   }
 
+  .home-link {
+    padding: 10px 15px;
+    font-size: var(--font-size-14px);
+  }
+
   /*  */
 
   /* game-start */
@@ -247,7 +252,12 @@
     background-size: auto;
   }
 
+  .home-link {
+    display: none;
+  }
+
   /*  */
+  
   /* game-start */
   .title-area {
     font-size: var(--font-size-24px);
