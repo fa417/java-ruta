@@ -5,8 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const from = params.get('from');
 
   const backLink = document.getElementById('back-home');
-  if (from === 'portfolio') {
-    backLink.style.display = 'inline';
+  const isFromPortfolio = from === 'portfolio';
+  const isSP = window.matchMedia('(max-width: 768px)').matches;
+
+  if (isFromPortfolio && isSP) {
+    backLink.style.display = 'block';
   }
 
   const first = document.getElementById('game-start');
