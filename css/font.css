@@ -50,7 +50,7 @@ footer p {
 /*  */
 
 /* common */
-home-link {
+.home-link {
   color: var(--black-color);
   font-size: var(--font-size-12px);
   font-weight: var(--font-weight-bold);
