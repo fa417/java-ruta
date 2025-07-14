@@ -96,9 +96,9 @@
   }
 
   .cards {
-    row-gap: 30px;
-    column-gap: 10px;
-    margin: 70px auto 0;
+    /* row-gap: 30px;
+    column-gap: 10px; */
+    margin: 30px auto 0;
     width: 90%;
   }
 
