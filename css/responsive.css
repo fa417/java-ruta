@@ -104,8 +104,8 @@
 
   .card {
     font-size: var(--font-size-18px);
-    width: 130px;
-    height: 150px;
+    width: 180px;
+    height: 210px;
     margin: 10px auto;
     font-size: var(--font-size-18px);
   }
