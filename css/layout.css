@@ -61,7 +61,7 @@ footer {
 
 /*  */
 
-/* game-start */
+/* #game-start */
 .title-area {
   text-align: center;
   padding: 20px;
@@ -94,7 +94,7 @@ footer {
 
 /*  */
 
-/* game-question */
+/* #game-question */
 .question-inner {
   padding: 10px;
 }
@@ -182,7 +182,7 @@ footer {
 /*  */
 
 
-/* game-end */
+/* #game-end */
 .cards-reslut {
   display: flex;
   align-items: center;
@@ -231,6 +231,7 @@ footer {
 
 .answer,
 .end,
+.data,
 .next-page,
 .return-page {
   padding: 5px 10px;
@@ -245,7 +246,7 @@ footer {
 
 /*  */
 
-/* game-answer */
+/* #game-answer */
 .answer-wrapper {
   margin: 60px 0;
 }
@@ -278,6 +279,46 @@ footer {
 .answer-explanation {
   position: relative;
   padding: 30px 10px;
+}
+
+/*  */
+
+/* #game-data */
+
+.data-container {
+  margin: 60px 0;
+  padding: 20px 10px;
+}
+
+.drop-down {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.bar-wrapper:first-child {
+  margin-top: 20px;
+}
+
+.bar-wrapper {
+  align-items: center;
+  margin-bottom: 6px;
+  width: 100%;
+}
+
+.label-day {
+  width: 100px;
+}
+
+.bar-inner{
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+.bar {
+  height: 25px;
 }
 
 /*  */

@@ -47,7 +47,7 @@
       </footer>
     </div>
 
-    <div class="game" id="question" style="display: none;">
+    <div class="game" id="game-question" style="display: none;">
 
       <div id="question-area">
         <div class="question-inner">
@@ -101,6 +101,7 @@
 
       <div class="game-links">
         <button class="answer" id="answer-btn">答え合わせを見る</button>
+        <button class="data" id="data-btn">じゃばログ（遊んだ記録）を見る</button>
 
         <div class="game-links-row2">
           <button class="one-more" id="retry-btn">もう一回遊ぶ</button>
@@ -109,6 +110,7 @@
       </div>
     </div>
 
+    <!-- 答え合わせ３ページ目 -->
     <div class="game" id="game-answer" style="display: none;">
       <h3 class="page-title">答え合わせ</h3>
 
@@ -118,15 +120,18 @@
       <div class="game-links">
         <button class="next-page" id="next2">次へ</button>
 
+
         <button class="end" id="end-btn">結果発表を見る</button>
+        <button class="data" id="data-btn2">じゃばログ（遊んだ記録）を見る</button>
 
         <div class="game-links-row2">
-          <button class="one-more" id="retry-btn-answer">もう一回遊ぶ</button>
-          <button class="home" id="home-btn-answer">トップに戻る</button>
+          <button class="one-more" id="retry-btn2">もう一回遊ぶ</button>
+          <button class="home" id="home-btn2">トップに戻る</button>
         </div>
       </div>
     </div>
 
+    <!-- 答え合わせ２ページ目 -->
     <div class="game" id="game-answer2" style="display: none;">
       <h3 class="page-title">答え合わせ</h3>
 
@@ -137,18 +142,51 @@
         <button class="return-page" id="return1">戻る</button>
 
         <button class="end" id="end-btn2">結果発表を見る</button>
+        <button class="data" id="data-btn3">じゃばログ（遊んだ記録）を見る</button>
 
         <div class="game-links-row2">
-          <button class="one-more" id="retry-btn-answer2">もう一回遊ぶ</button>
-          <button class="home" id="home-btn-answer2">トップに戻る</button>
+          <button class="one-more" id="retry-btn3">もう一回遊ぶ</button>
+          <button class="home" id="home-btn3">トップに戻る</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="game" id="game-data" style="display: none;">
+      <h3 class="page-title">じゃばログ</h3>
+
+      <div class="data-container">
+        
+        <div class="drop-down">
+          <label for="month-choice">月を選ぶ</label>
+          <select name="choice" class="choice" id="month-choice"></select>
+        </div>
+
+        <div id="bar-graph"></div>
+
+      </div>
+
+      <div class="game-links">
+        <button class="end" id="end-btn3">結果発表を見る</button>
+
+        <div class="game-links-row2">
+          <button class="one-more" id="retry-btn4">もう一回遊ぶ</button>
+          <button class="home" id="home-btn4">トップに戻る</button>
         </div>
       </div>
     </div>
   </main>
 
-  <a href="https://fuko-portfolio.vercel.app/html/java-ruta.html" class="home-link" id="back-home" style="display: none;">←</a>
+  <a href="https://fuko-portfolio.vercel.app/html/java-ruta.html" class="home-link" id="back-home"
+    style="display: none;">←</a>
 
-  <script type="module" src="js/script.js"></script>
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/game-start.js"></script>
+  <script type="module" src="js/game-question.js"></script>
+  <script type="module" src="js/game-end.js"></script>
+  <script type="module" src="js/game-answer.js"></script>
+  <script type="module" src="js/game-answer2.js"></script>
+  <script type="module" src="js/game-data.js"></script>
   <script type="module" src="js/service-worker.js"></script>
 </body>
 <script>

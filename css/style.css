@@ -32,7 +32,7 @@
 
 /*  */
 
-/* game-start */
+/* #game-start */
 .title-area {
   background: var(--red-color);
   border-radius: 20px;
@@ -56,7 +56,7 @@
 
 /*  */
 
-/* game-question */
+/* #game-question */
 .question-inner {
   background: var(--white-color);
 }
@@ -102,7 +102,7 @@
 /*  */
 
 
-/* game-end */
+/* #game-end */
 .page-title {
   background: var(--white-color);
 }
@@ -135,6 +135,7 @@
 .one-more,
 .home,
 .end,
+.data,
 .next-page,
 .return-page {
   background: var(--white-color);
@@ -144,7 +145,7 @@
 
 /*  */
 
-/* game-answer */
+/* #game-answer */
 .answer-block {
   background: var(--white-color);
 }
@@ -160,6 +161,17 @@
 
 .label {
   background: var(--white-color);
+}
+
+/*  */
+
+/* #game-data */
+.data-container {
+  background: var(--white-color);
+}
+
+.bar {
+  background: var(--red-color);
 }
 
 /*  */
