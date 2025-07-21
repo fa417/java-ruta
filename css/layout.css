@@ -296,25 +296,22 @@ footer {
   align-items: flex-end;
 }
 
+.bar-wrapper {
+  flex-direction: column;
+  padding-bottom: 5px;
+  width: 100%;
+}
+
 .bar-wrapper:first-child {
   margin-top: 20px;
 }
 
-.bar-wrapper {
-  align-items: center;
-  margin-bottom: 6px;
-  width: 100%;
+.bar-wrapper:not(:last-child){
+  margin-bottom: 10px;
 }
 
 .label-day {
   width: 100px;
-}
-
-.bar-inner{
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  margin-left: 10px;
 }
 
 .bar {

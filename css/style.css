@@ -170,6 +170,10 @@
   background: var(--white-color);
 }
 
+.bar-wrapper {
+  border-bottom: 1px solid var(--black-color);
+}
+
 .bar {
   background: var(--red-color);
 }

@@ -111,13 +111,13 @@ function drawGraph(monthKey) {
 
     let scal;
     if (window.innerWidth < 379) {
-      scal = 7;
+      scal = 15;
     } else if (window.innerWidth < 767) {
-      scal = 20;
+      scal = 18;
     } else if (window.innerWidth < 1024) {
-      scal = 23;
+      scal = 28;
     } else {
-      scal = 30;
+      scal = 20;
     }
 
     bar.style.width = `${score * scal}px`;
