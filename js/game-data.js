@@ -55,19 +55,32 @@ function loadScore() {
 
 const select = document.getElementById('month-choice');
 
-const allKey = Object.keys(localStorage);
+// const allKey = Object.keys(localStorage);
 
-select.innerHTML = '';
+// select.innerHTML = '';
 
-allKey.forEach(key => {
-  if (/^\d{4}-\d{2}$/.test(key)) {
-    const option = document.createElement('option');
-    option.value = key;
-    option.textContent = key;
-    select.appendChild(option);
+// allKey.forEach(key => {
+//   if (/^\d{4}-\d{2}$/.test(key)) {
+//     const option = document.createElement('option');
+//     option.value = key;
+//     option.textContent = key;
+//     select.appendChild(option);
 
-  }
-});
+//   }
+// });
+
+function updateMonthSelect() {
+  const allKey = Object.keys(localStorage);
+  select.innerHTML = '';
+  allKey.forEach(key => {
+    if (/^\d{4}-\d{2}$/.test(key)) {
+      const option = document.createElement('option');
+      option.value = key;
+      option.textContent = key;
+      select.appendChild(option);
+    }
+  });
+}
 
 function drawGraph(monthKey) {
 
@@ -125,22 +138,36 @@ function drawGraph(monthKey) {
 // 
 
 // 最初の表示
+// window.addEventListener('DOMContentLoaded', () => {
+//   const graphArea = document.getElementById('bar-graph');
+
+//   const newMonth = allKey
+//     .filter(key => /^\d{4}-\d{2}$/.test(key))
+//     .sort((a, b) => a.localeCompare(b))
+//     .reverse()[0];
+
+//   select.value = newMonth;
+//   drawGraph(newMonth);
+
+//   select.addEventListener('change', () => {
+//     drawGraph(select.value);
+//   });
+// });
+// 
+
 window.addEventListener('DOMContentLoaded', () => {
-  const graphArea = document.getElementById('bar-graph');
+  updateMonthSelect();
 
-  const newMonth = allKey
-    .filter(key => /^\d{4}-\d{2}$/.test(key))
-    .sort((a, b) => a.localeCompare(b))
-    .reverse()[0];
-
-  select.value = newMonth;
-  drawGraph(newMonth);
+  const latestKey = [...select.options].pop()?.value; // 最後の option の value を使う
+  if (latestKey) {
+    select.value = latestKey;
+    drawGraph(latestKey);
+  }
 
   select.addEventListener('change', () => {
     drawGraph(select.value);
   });
 });
-// 
 
 
 // 結果発表ページに戻るボタン
