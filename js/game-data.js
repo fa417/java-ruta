@@ -46,12 +46,12 @@ function score(countNumber) {
   localStorage.setItem(monthKey, JSON.stringify(data));
 }
 
-function loadScore() {
-  const monthKey = getMonth();
-  const data = JSON.parse(localStorage.getItem(monthKey)) || {};
+// function loadScore() {
+//   const monthKey = getMonth();
+//   const data = JSON.parse(localStorage.getItem(monthKey)) || {};
 
-  console.log(data);
-}
+//   console.log(data);
+// }
 
 const select = document.getElementById('month-choice');
 
@@ -126,7 +126,7 @@ function drawGraph(monthKey) {
 window.addEventListener('DOMContentLoaded', () => {
   updateMonthSelect();
 
-  const latestKey = [...select.options].pop()?.value; // 最後の option の value を使う
+  const latestKey = [...select.options].pop()?.value;
   if (latestKey) {
     select.value = latestKey;
     drawGraph(latestKey);
