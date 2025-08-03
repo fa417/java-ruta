@@ -38,7 +38,7 @@ export function showQuestion() {
     nextBanner.style.display = 'none';
     action.style.display = 'none';
 
-    q.answer.forEach((choice) => {
+    [...q.answer].sort(() => Math.random() - 0.5).forEach((choice) => {
         const card = document.createElement('div');
         card.classList.add('card');
         card.textContent = choice.text;
