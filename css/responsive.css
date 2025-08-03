@@ -379,6 +379,7 @@
     padding: 20px;
   }
 
+  .result-correct-banner,
   .result-incorrect-banner {
     width: 80%;
   }
@@ -523,7 +524,7 @@
     padding-bottom: 10px;
   }
 
-  .bar-wrapper:not(:last-child){
+  .bar-wrapper:not(:last-child) {
     margin-bottom: 20px;
   }
 
@@ -676,6 +677,7 @@
     padding: 20px;
   }
 
+  .result-correct-banner,
   .result-incorrect-banner {
     width: 70%;
   }
@@ -834,7 +836,7 @@
     padding-bottom: 10px;
   }
 
-  .bar-wrapper:not(:last-child){
+  .bar-wrapper:not(:last-child) {
     margin-bottom: 20px;
   }
 
