@@ -54,7 +54,7 @@ function loadScore() {
 }
 
 const select = document.getElementById('month-choice');
-
+localStorage.clear();
 const allKey = Object.keys(localStorage);
 
 select.innerHTML = '';
