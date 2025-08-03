@@ -53,6 +53,8 @@ function loadScore() {
   console.log(data);
 }
 
+localStorage.clear();
+
 const select = document.getElementById('month-choice');
 
 function updateMonthSelect() {
