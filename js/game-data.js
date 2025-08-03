@@ -69,9 +69,6 @@ const dummyAugust = {
 
 localStorage.setItem("2025-07", JSON.stringify(dummyJuly));
 localStorage.setItem("2025-08", JSON.stringify(dummyAugust));
-
-localStorage.clear();
-
 const allKey = Object.keys(localStorage);
 
 select.innerHTML = '';
