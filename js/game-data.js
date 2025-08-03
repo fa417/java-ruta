@@ -55,20 +55,23 @@ function loadScore() {
 
 const select = document.getElementById('month-choice');
 // ダミー
-// const dummyJuly = {
-//   "2025-07-01": 10,
-//   "2025-07-05": 16,
-//   "2025-07-15": 20
-// };
+const dummyJuly = {
+  "2025-07-01": 10,
+  "2025-07-05": 16,
+  "2025-07-15": 20
+};
 
-// const dummyAugust = {
-//   "2025-08-02": 8,
-//   "2025-08-07": 16,
-//   "2025-08-15": 20
-// };
+const dummyAugust = {
+  "2025-08-02": 8,
+  "2025-08-07": 16,
+  "2025-08-15": 20
+};
 
-// localStorage.setItem("2025-07", JSON.stringify(dummyJuly));
-// localStorage.setItem("2025-08", JSON.stringify(dummyAugust));
+localStorage.setItem("2025-07", JSON.stringify(dummyJuly));
+localStorage.setItem("2025-08", JSON.stringify(dummyAugust));
+
+localStorage.clear();
+
 const allKey = Object.keys(localStorage);
 
 select.innerHTML = '';
