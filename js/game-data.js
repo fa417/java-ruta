@@ -22,27 +22,44 @@ import { questions } from './data/question.js';
 
 
 // 過去の記録表示処理
-function getToday() {
-  const today = new Date();
-  const year = today.getFullYear();
-  const month = (today.getMonth() + 1).toString().padStart(2, '0');
-  const day = today.getDate();
-  return `${year}-${month}-${day}`;
-}
+function getDateInfo() {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = (now.getMonth() + 1).toString().padStart(2, '0');
+  const day = now.getDate().toString().padStart(2, '0');
+  const hour = now.getHours().toString().padStart(2, '0');
+  const min = now.getMinutes().toString().padStart(2, '0');
+  const second = now.getSeconds().toString().padStart(2, '0');
 
-function getMonth() {
-  const today = new Date();
-  const year = today.getFullYear();
-  const month = (today.getMonth() + 1).toString().padStart(2, '0')
-  return `${year}-${month}`;
+  return {
+    today: `${year}-${month}-${day}`,
+    month: `${year}-${month}`,
+    time: `${hour}:${min}:${second}`,
+    timeText: `${year}-${month}-${day} ${hour}:${min}:${second}`
+  };
 }
+// function getToday() {
+//   const today = new Date();
+//   const year = today.getFullYear();
+//   const month = (today.getMonth() + 1).toString().padStart(2, '0');
+//   const day = today.getDate();
+//   return `${year}-${month}-${day}`;
+// }
+
+// function getMonth() {
+//   const today = new Date();
+//   const year = today.getFullYear();
+//   const month = (today.getMonth() + 1).toString().padStart(2, '0')
+//   return `${year}-${month}`;
+// }
 
 function score(countNumber) {
-  const monthKey = getMonth();
-  const todayKey = getToday();
+  // const monthKey = getMonth();
+  // const todayKey = getToday();
+  const { month: monthKey, timeText: timeKey } = getDateInfo();
   const data = JSON.parse(localStorage.getItem(monthKey)) || {};
 
-  data[todayKey] = countNumber;
+  data[timeKey] = countNumber;
   localStorage.setItem(monthKey, JSON.stringify(data));
 }
 
@@ -141,7 +158,7 @@ window.addEventListener('DOMContentLoaded', () => {
 // 結果発表ページに戻るボタン
 document.getElementById('end-btn3').addEventListener('click', () => {
   score(countNumber);
-  
+
   end.style.display = 'block';
   answer.style.display = 'none';
   first.style.display = 'none';
