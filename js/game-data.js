@@ -22,44 +22,27 @@ import { questions } from './data/question.js';
 
 
 // 過去の記録表示処理
-function getDateInfo() {
-  const now = new Date();
-  const year = now.getFullYear();
-  const month = (now.getMonth() + 1).toString().padStart(2, '0');
-  const day = now.getDate().toString().padStart(2, '0');
-  const hour = now.getHours().toString().padStart(2, '0');
-  const min = now.getMinutes().toString().padStart(2, '0');
-  const second = now.getSeconds().toString().padStart(2, '0');
-
-  return {
-    today: `${year}-${month}-${day}`,
-    month: `${year}-${month}`,
-    time: `${hour}:${min}:${second}`,
-    timeText: `${year}-${month}-${day} ${hour}:${min}:${second}`
-  };
+function getToday() {
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = (today.getMonth() + 1).toString().padStart(2, '0');
+  const day = today.getDate();
+  return `${year}-${month}-${day}`;
 }
-// function getToday() {
-//   const today = new Date();
-//   const year = today.getFullYear();
-//   const month = (today.getMonth() + 1).toString().padStart(2, '0');
-//   const day = today.getDate();
-//   return `${year}-${month}-${day}`;
-// }
 
-// function getMonth() {
-//   const today = new Date();
-//   const year = today.getFullYear();
-//   const month = (today.getMonth() + 1).toString().padStart(2, '0')
-//   return `${year}-${month}`;
-// }
+function getMonth() {
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = (today.getMonth() + 1).toString().padStart(2, '0')
+  return `${year}-${month}`;
+}
 
 function score(countNumber) {
-  // const monthKey = getMonth();
-  // const todayKey = getToday();
-  const { month: monthKey, timeText: timeKey } = getDateInfo();
+  const monthKey = getMonth();
+  const todayKey = getToday();
   const data = JSON.parse(localStorage.getItem(monthKey)) || {};
 
-  data[timeKey] = countNumber;
+  data[todayKey] = countNumber;
   localStorage.setItem(monthKey, JSON.stringify(data));
 }
 
@@ -85,68 +68,16 @@ function updateMonthSelect() {
   });
 }
 
-// function drawGraph(monthKey) {
-
-//   // 保存データーそのもの
-//   const Scoredata = JSON.parse(localStorage.getItem(monthKey)) || {};
-//   // 
-//   const graphArea = document.getElementById('bar-graph');
-//   graphArea.innerHTML = '';
-
-
-//   for (const date in Scoredata) {
-//     const score = Scoredata[date];
-
-//     const barRow = document.createElement('div');
-//     barRow.style.display = 'flex';
-//     barRow.classList.add('bar-wrapper');
-
-//     const label = document.createElement('div');
-//     label.textContent = date;
-//     label.classList.add('label-day');
-
-//     const barInner = document.createElement('div');
-//     barInner.classList.add('bar-inner');
-
-//     const bar = document.createElement('div');
-//     bar.classList.add('bar');
-
-//     let scal;
-//     if (window.innerWidth < 379) {
-//       scal = 14;
-//     } else if (window.innerWidth < 480) {
-//       scal = 15;
-//     } else if (window.innerWidth < 767) {
-//       scal = 20;
-//     } else if (window.innerWidth < 1024) {
-//       scal = 28;
-//     } else {
-//       scal = 32;
-//     }
-
-//     bar.style.width = `${score * scal}px`;
-
-//     const scoreNumber = document.createElement('div');
-//     scoreNumber.classList.add('score-number');
-//     scoreNumber.textContent = `${score}点`;
-
-//     graphArea.appendChild(barRow);
-//     barRow.appendChild(label);
-//     barRow.appendChild(barInner);
-//     barInner.appendChild(bar);
-//     barInner.appendChild(scoreNumber);
-
-//   }
-// }
 function drawGraph(monthKey) {
+
+  // 保存データーそのもの
   const Scoredata = JSON.parse(localStorage.getItem(monthKey)) || {};
+  // 
   const graphArea = document.getElementById('bar-graph');
   graphArea.innerHTML = '';
 
-  // 🔥 キー（日付）でソート
-  const sortedDates = Object.keys(Scoredata).sort();
 
-  sortedDates.forEach(date => {
+  for (const date in Scoredata) {
     const score = Scoredata[date];
 
     const barRow = document.createElement('div');
@@ -187,9 +118,9 @@ function drawGraph(monthKey) {
     barRow.appendChild(barInner);
     barInner.appendChild(bar);
     barInner.appendChild(scoreNumber);
-  });
-}
 
+  }
+}
 // 
 
 window.addEventListener('DOMContentLoaded', () => {
