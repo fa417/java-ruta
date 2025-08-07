@@ -12,7 +12,6 @@ import {
 } from './game-start.js';
 
 import {
-  countIndex,
   countNumber,
   randomQuestion,
   showQuestion,
@@ -42,8 +41,6 @@ export function score(countNumber) {
   const monthKey = getMonth();
   const todayKey = getToday();
   const data = JSON.parse(localStorage.getItem(monthKey)) || {};
-
-  console.log('保存対象：', monthKey, todayKey, countNumber);
 
   data[todayKey] = countNumber;
   localStorage.setItem(monthKey, JSON.stringify(data));

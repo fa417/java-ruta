@@ -12,11 +12,20 @@ import {
 } from './game-start.js';
 
 import {
+    countNumber,
     showQuestion,
     randomQuestion,
     setCountIndex,
     setCountNumber
 } from "./game-question.js";
+
+import {
+    score,
+    updateMonthSelect,
+    drawGraph,
+    getMonth
+} from './game-data.js';
+
 
 
 
@@ -121,6 +130,11 @@ document.getElementById('end-btn').addEventListener('click', () => {
 
 // 遊んだ記録に飛ぶボタン処理
 document.getElementById('data-btn2').addEventListener('click', () => {
+    score(countNumber);
+
+    updateMonthSelect();
+    drawGraph(getMonth());
+
     data.style.display = 'block';
     first.style.display = 'none';
     end.style.display = 'none';

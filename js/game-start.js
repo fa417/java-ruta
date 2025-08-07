@@ -27,7 +27,7 @@ start.addEventListener('click', () => {
     answerpage2.style.display = 'none';
     data.style.display = 'none';
 
-    randomQuestion.splice(0, randomQuestion.length, ...questions.sort(() => Math.random() - 0.5).slice(0, 20));
+    randomQuestion.splice(0, randomQuestion.length, ...questions.sort(() => Math.random() - 0.5).slice(0, 1));
 
     showQuestion();
 });
