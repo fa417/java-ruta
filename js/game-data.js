@@ -1,3 +1,7 @@
+// 問題ページ
+import { questions } from './data/question.js';
+// 
+
 import {
   first,
   questionPage,
@@ -16,9 +20,6 @@ import {
   setCountNumber
 } from "./game-question.js";
 
-// 問題ページ
-import { questions } from './data/question.js';
-// 
 
 
 // 過去の記録表示処理
@@ -30,21 +31,26 @@ function getToday() {
   return `${year}-${month}-${day}`;
 }
 
-function getMonth() {
+export function getMonth() {
   const today = new Date();
   const year = today.getFullYear();
   const month = (today.getMonth() + 1).toString().padStart(2, '0')
   return `${year}-${month}`;
 }
 
-function score(countNumber) {
+export function score(countNumber) {
   const monthKey = getMonth();
   const todayKey = getToday();
   const data = JSON.parse(localStorage.getItem(monthKey)) || {};
 
+  console.log('保存対象：', monthKey, todayKey, countNumber);
+
   data[todayKey] = countNumber;
   localStorage.setItem(monthKey, JSON.stringify(data));
 }
+
+
+
 
 // function loadScore() {
 //   const monthKey = getMonth();
@@ -55,7 +61,7 @@ function score(countNumber) {
 
 const select = document.getElementById('month-choice');
 
-function updateMonthSelect() {
+export function updateMonthSelect() {
   const allKey = Object.keys(localStorage);
   select.innerHTML = '';
   allKey.forEach(key => {
@@ -68,7 +74,7 @@ function updateMonthSelect() {
   });
 }
 
-function drawGraph(monthKey) {
+export function drawGraph(monthKey) {
 
   // 保存データーそのもの
   const Scoredata = JSON.parse(localStorage.getItem(monthKey)) || {};

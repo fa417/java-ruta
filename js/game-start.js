@@ -1,12 +1,14 @@
 
+// 問題ページ
+import { questions } from './data/question.js';
+// 
+
 import {
     randomQuestion,
     showQuestion
 } from "./game-question.js";
 
-// 問題ページ
-import { questions } from './data/question.js';
-// 
+
 
 const first = document.getElementById('game-start');
 const questionPage = document.getElementById('game-question');
@@ -25,7 +27,7 @@ start.addEventListener('click', () => {
     answerpage2.style.display = 'none';
     data.style.display = 'none';
 
-    randomQuestion.splice(0, randomQuestion.length, ...questions.sort(() => Math.random() - 0.5).slice(0, 20));
+    randomQuestion.splice(0, randomQuestion.length, ...questions.sort(() => Math.random() - 0.5).slice(0, 2));
 
     showQuestion();
 });

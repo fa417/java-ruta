@@ -1,3 +1,7 @@
+// 問題ページ
+import { questions } from './data/question.js';
+// 
+
 import {
     first,
     questionPage,
@@ -15,9 +19,12 @@ import {
     setCountNumber,
 } from "./game-question.js";
 
-// 問題ページ
-import { questions } from './data/question.js';
-// 
+import {
+    score,
+    updateMonthSelect,
+    drawGraph,
+    getMonth
+} from './game-data.js';
 
 // もう１回遊ぶボタン処理
 document.getElementById('retry-btn').addEventListener('click', () => {
@@ -40,6 +47,10 @@ document.getElementById('retry-btn').addEventListener('click', () => {
 
 // 遊んだ記録に飛ぶボタン処理
 document.getElementById('data-btn').addEventListener('click', () => {
+    score(countNumber); // ←ここで記録するのが正解！
+
+    updateMonthSelect();   // ←セレクト再更新
+    drawGraph(getMonth());
     data.style.display = 'block';
     first.style.display = 'none';
     end.style.display = 'none';

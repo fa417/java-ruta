@@ -1,3 +1,7 @@
+// 問題ページ
+import { questions } from './data/question.js';
+// 
+
 import {
     first,
     questionPage,
@@ -14,9 +18,7 @@ import {
     setCountNumber
 } from "./game-question.js";
 
-// 問題ページ
-import { questions } from './data/question.js';
-// 
+
 
 const answerArea = document.getElementById('answer-area');
 

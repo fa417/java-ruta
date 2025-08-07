@@ -1,3 +1,7 @@
+// 問題ページ
+import { questions } from './data/question.js';
+// 
+
 import {
     first,
     questionPage,
@@ -14,9 +18,7 @@ import {
     setCountNumber
 } from "./game-question.js";
 
-// 問題ページ
-import { questions } from './data/question.js';
-// 
+
 
 // 2ページ目「戻る」
 document.getElementById('return1').addEventListener('click', () => {
