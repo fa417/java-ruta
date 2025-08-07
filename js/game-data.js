@@ -49,16 +49,6 @@ export function score(countNumber) {
   localStorage.setItem(monthKey, JSON.stringify(data));
 }
 
-
-
-
-// function loadScore() {
-//   const monthKey = getMonth();
-//   const data = JSON.parse(localStorage.getItem(monthKey)) || {};
-
-//   console.log(data);
-// }
-
 const select = document.getElementById('month-choice');
 
 export function updateMonthSelect() {
